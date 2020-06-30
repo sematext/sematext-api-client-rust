@@ -6,7 +6,7 @@ description = "Client package for talking to Sematext Cloud."
 readme = "README.md"
 repository = "https://github.com/sematext/sematext-api-client-rust"
 license-file = "LICENSE"
-keywords = ["cloud", "monitoring", "logging", "metrics", "alerting", "sematext", "elasticsearch", "ELK", "logstash", "SPM", "APM", "API", "Client", "devops"]
+keywords = ["monitoring", "logging", "metrics", "alerting", "sematext"]
 
 [dependencies]
 serde = "1.0"
