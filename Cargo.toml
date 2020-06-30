@@ -1,7 +1,12 @@
 [package]
 name = "stcloud"
-version = "0.1.0"
-authors = ["Swagger Codegen team and contributors"]
+version = "0.1.1"
+authors = ["Sematext Inc"]
+description = "Client package for talking to Sematext Cloud."
+readme = "README.md"
+repository = "https://github.com/sematext/sematext-api-client-rust"
+license-file = "LICENSE"
+keywords = ["cloud", "monitoring", "logging", "metrics", "alerting", "sematext", "elasticsearch", "ELK", "logstash", "SPM", "APM", "API", "Client", "devops"]
 
 [dependencies]
 serde = "1.0"
