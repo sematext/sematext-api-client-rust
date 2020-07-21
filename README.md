@@ -1,4 +1,3 @@
-
 # <img src="./assets/octi-blue.png" valign="bottom" width="60px"/>**&nbsp;&nbsp;sematext-api-client-rust**
 
 <br>
@@ -36,8 +35,8 @@ Refer to below link for deeper information on the API itself.
 - [&nbsp;&nbsp;sematext-api-client-rust](#sematext-api-client-rust)
   - [Contents](#contents)
   - [Getting Started](#getting-started)
-  - [Installation](#installation)
   - [Authentication](#authentication)
+  - [Installation](#installation)
   - [Reference](#reference)
   - [Documentation for Models](#documentation-for-models)
 
