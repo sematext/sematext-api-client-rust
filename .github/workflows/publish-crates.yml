@@ -30,11 +30,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: publish
-      - name : Assign ownership
-        uses: actions-rs/cargo@v1
-        with:
-          command: owner
-          args : --add sematext-packages
+     
 
       
     
