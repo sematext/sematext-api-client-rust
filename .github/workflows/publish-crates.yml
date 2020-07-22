@@ -11,16 +11,28 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name : Set up Rust
-        uses: hecrj/setup-rust-action@v1
-      - uses: actions/checkout@v2
-      - name: Publish
-      - uses: actions-rs/cargo@v1
+      - name: Install stable toolchain
+        uses: actions-rs/toolchain@v1                
+      - name: Checkout
+        uses: actions/checkout@v2        
+      - name : Login
+        uses: actions-rs/cargo@v1
         with:
           command: login
-          args: ${{ secrets.CRATES_TOKEN }}
-      - run: cargo build
-      - run: cargo publish
-      - run: cargo owner --add sematext-packages
+          args: ${{ secrets.CRATES_TOKEN }}      
+      - name : Build
+        uses: actions-rs/cargo@v1
+        with:
+          command: build
+      - name : Publish
+        uses: actions-rs/cargo@v1
+        with:
+          command: publish
+      - name : Assign ownership
+        uses: actions-rs/cargo@v1
+        with:
+          command: owner
+          args : --add sematext-packages
+
       
     
