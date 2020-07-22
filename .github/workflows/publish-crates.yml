@@ -11,16 +11,29 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name : Set up Rust
-        uses: hecrj/setup-rust-action@v1
-      - uses: actions/checkout@v2
-        - name: Publish
-      - uses: actions-rs/cargo@v1
+      - name: Install stable toolchain
+        uses: actions-rs/toolchain@v1
         with:
+          toolchain: stable
+      - name: Checkout
+        uses: actions/checkout@v2        
+      - name: Login to crates.io
+        uses: actions-rs/cargo@v1
+        with:
+          toolchain: stable
           command: login
           args: ${{ secrets.CRATES_TOKEN }}
-      - run: cargo build
-      - run: cargo publish
-      - run: cargo owner --add sematext-packages
+      - name : Build
+        uses: actions-rs/cargo@v1
+        with:
+          toolchain: stable
+          command: build
+      - name : Publish
+        uses: actions-rs/cargo@v1
+        with:
+          toolchain: stable
+          command: publish
+     
+
       
     
