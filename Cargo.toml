@@ -1,6 +1,6 @@
 [package]
 name = "stcloud"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["Sematext Inc"]
 description = "Client package for talking to Sematext Cloud."
 readme = "README.md"
