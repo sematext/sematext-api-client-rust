@@ -2,12 +2,12 @@
 
 All URIs are relative to *https://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**delete_saved_query_using_delete**](SavedQueriesApi.md#delete_saved_query_using_delete) | **Delete** /users-web/api/v3/savedQueries/{updateableQueryId} | Delete saved query
-[**get_saved_queries_for_app_using_get**](SavedQueriesApi.md#get_saved_queries_for_app_using_get) | **Get** /users-web/api/v3/apps/{appId}/savedQueries | Get saved queries for an app
-[**save_query_using_post**](SavedQueriesApi.md#save_query_using_post) | **Post** /users-web/api/v3/savedQueries | Create saved query
-[**save_query_using_put**](SavedQueriesApi.md#save_query_using_put) | **Put** /users-web/api/v3/savedQueries/{updateableQueryId} | Update saved query
+| Method                                                                                            | HTTP request                                                  | Description                  |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | ---------------------------- |
+| [**delete_saved_query_using_delete**](SavedQueriesApi.md#delete_saved_query_using_delete)         | **Delete** /users-web/api/v3/savedQueries/{updateableQueryId} | Delete saved query           |
+| [**get_saved_queries_for_app_using_get**](SavedQueriesApi.md#get_saved_queries_for_app_using_get) | **Get** /users-web/api/v3/apps/{appId}/savedQueries           | Get saved queries for an app |
+| [**save_query_using_post**](SavedQueriesApi.md#save_query_using_post)                             | **Post** /users-web/api/v3/savedQueries                       | Create saved query           |
+| [**save_query_using_put**](SavedQueriesApi.md#save_query_using_put)                               | **Put** /users-web/api/v3/savedQueries/{updateableQueryId}    | Update saved query           |
 
 
 # **delete_saved_query_using_delete**
@@ -16,10 +16,10 @@ Delete saved query
 
 ### Required Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **updateable_query_id** | **i64**| updateableQueryId | 
+| Name                    | Type                | Description                           | Notes                    |
+| ----------------------- | ------------------- | ------------------------------------- | ------------------------ |
+| **ctx**                 | **context.Context** | context containing the authentication | nil if no authentication |
+| **updateable_query_id** | **i64**             | updateableQueryId                     |
 
 ### Return type
 
@@ -42,10 +42,10 @@ Get saved queries for an app
 
 ### Required Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **app_id** | **i64**| appId | 
+| Name       | Type                | Description                           | Notes                    |
+| ---------- | ------------------- | ------------------------------------- | ------------------------ |
+| **ctx**    | **context.Context** | context containing the authentication | nil if no authentication |
+| **app_id** | **i64**             | appId                                 |
 
 ### Return type
 
@@ -68,10 +68,10 @@ Create saved query
 
 ### Required Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **saved_query_dto** | [**SavedQuery**](SavedQuery.md)| savedQueryDto | 
+| Name                | Type                            | Description                           | Notes                    |
+| ------------------- | ------------------------------- | ------------------------------------- | ------------------------ |
+| **ctx**             | **context.Context**             | context containing the authentication | nil if no authentication |
+| **saved_query_dto** | [**SavedQuery**](SavedQuery.md) | savedQueryDto                         |
 
 ### Return type
 
@@ -94,11 +94,11 @@ Update saved query
 
 ### Required Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **saved_query_dto** | [**SavedQuery**](SavedQuery.md)| savedQueryDto | 
-  **updateable_query_id** | **i64**| updateableQueryId | 
+| Name                    | Type                            | Description                           | Notes                    |
+| ----------------------- | ------------------------------- | ------------------------------------- | ------------------------ |
+| **ctx**                 | **context.Context**             | context containing the authentication | nil if no authentication |
+| **saved_query_dto**     | [**SavedQuery**](SavedQuery.md) | savedQueryDto                         |
+| **updateable_query_id** | **i64**                         | updateableQueryId                     |
 
 ### Return type
 
@@ -114,4 +114,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

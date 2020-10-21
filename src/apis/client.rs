@@ -5,18 +5,19 @@ use super::configuration::Configuration;
 
 pub struct APIClient<C: hyper::client::Connect> {
   configuration: Rc<Configuration<C>>,
-  alert_notifications_api: Box<dyn (::apis::AlertNotificationsApi)>,
-  alerts_api: Box<dyn (::apis::AlertsApi)>,
-  apps_api: Box<dyn (::apis::AppsApi)>,
-  aws_settings_controller_api: Box<dyn (::apis::AwsSettingsControllerApi)>,
-  billing_api: Box<dyn (::apis::BillingApi)>,
-  logs_app_api: Box<dyn (::apis::LogsAppApi)>,
-  metrics_api: Box<dyn (::apis::MetricsApi)>,
-  monitoring_app_api: Box<dyn (::apis::MonitoringAppApi)>,
-  reset_password_api: Box<dyn (::apis::ResetPasswordApi)>,
-  saved_queries_api: Box<dyn (::apis::SavedQueriesApi)>,
-  subscriptions_api: Box<dyn (::apis::SubscriptionsApi)>,
-  tag_api_controller_api: Box<dyn (::apis::TagApiControllerApi)>,
+  alert_notifications_api: Box<::apis::AlertNotificationsApi>,
+  alerts_api: Box<::apis::AlertsApi>,
+  apps_api: Box<::apis::AppsApi>,
+  aws_settings_controller_api: Box<::apis::AwsSettingsControllerApi>,
+  billing_api: Box<::apis::BillingApi>,
+  logs_app_api: Box<::apis::LogsAppApi>,
+  metrics_api: Box<::apis::MetricsApi>,
+  monitoring_app_api: Box<::apis::MonitoringAppApi>,
+  reset_password_api: Box<::apis::ResetPasswordApi>,
+  saved_queries_api: Box<::apis::SavedQueriesApi>,
+  subscriptions_api: Box<::apis::SubscriptionsApi>,
+  tag_api_controller_api: Box<::apis::TagApiControllerApi>,
+  tokens_api_controller_api: Box<::apis::TokensApiControllerApi>,
 }
 
 impl<C: hyper::client::Connect> APIClient<C> {
@@ -37,55 +38,60 @@ impl<C: hyper::client::Connect> APIClient<C> {
       saved_queries_api: Box::new(::apis::SavedQueriesApiClient::new(rc.clone())),
       subscriptions_api: Box::new(::apis::SubscriptionsApiClient::new(rc.clone())),
       tag_api_controller_api: Box::new(::apis::TagApiControllerApiClient::new(rc.clone())),
+      tokens_api_controller_api: Box::new(::apis::TokensApiControllerApiClient::new(rc.clone())),
     }
   }
 
-  pub fn alert_notifications_api(&self) -> &dyn (::apis::AlertNotificationsApi){
+  pub fn alert_notifications_api(&self) -> &::apis::AlertNotificationsApi{
     self.alert_notifications_api.as_ref()
   }
 
-  pub fn alerts_api(&self) -> &dyn (::apis::AlertsApi){
+  pub fn alerts_api(&self) -> &::apis::AlertsApi{
     self.alerts_api.as_ref()
   }
 
-  pub fn apps_api(&self) -> &dyn(::apis::AppsApi){
+  pub fn apps_api(&self) -> &::apis::AppsApi{
     self.apps_api.as_ref()
   }
 
-  pub fn aws_settings_controller_api(&self) -> &dyn (::apis::AwsSettingsControllerApi){
+  pub fn aws_settings_controller_api(&self) -> &::apis::AwsSettingsControllerApi{
     self.aws_settings_controller_api.as_ref()
   }
 
-  pub fn billing_api(&self) -> &dyn (::apis::BillingApi){
+  pub fn billing_api(&self) -> &::apis::BillingApi{
     self.billing_api.as_ref()
   }
 
-  pub fn logs_app_api(&self) -> &dyn (::apis::LogsAppApi){
+  pub fn logs_app_api(&self) -> &::apis::LogsAppApi{
     self.logs_app_api.as_ref()
   }
 
-  pub fn metrics_api(&self) -> &dyn (::apis::MetricsApi){
+  pub fn metrics_api(&self) -> &::apis::MetricsApi{
     self.metrics_api.as_ref()
   }
 
-  pub fn monitoring_app_api(&self) -> &dyn (::apis::MonitoringAppApi){
+  pub fn monitoring_app_api(&self) -> &::apis::MonitoringAppApi{
     self.monitoring_app_api.as_ref()
   }
 
-  pub fn reset_password_api(&self) -> &dyn (::apis::ResetPasswordApi){
+  pub fn reset_password_api(&self) -> &::apis::ResetPasswordApi{
     self.reset_password_api.as_ref()
   }
 
-  pub fn saved_queries_api(&self) -> &dyn (::apis::SavedQueriesApi){
+  pub fn saved_queries_api(&self) -> &::apis::SavedQueriesApi{
     self.saved_queries_api.as_ref()
   }
 
-  pub fn subscriptions_api(&self) -> &dyn (::apis::SubscriptionsApi){
+  pub fn subscriptions_api(&self) -> &::apis::SubscriptionsApi{
     self.subscriptions_api.as_ref()
   }
 
-  pub fn tag_api_controller_api(&self) -> &dyn (::apis::TagApiControllerApi){
+  pub fn tag_api_controller_api(&self) -> &::apis::TagApiControllerApi{
     self.tag_api_controller_api.as_ref()
+  }
+
+  pub fn tokens_api_controller_api(&self) -> &::apis::TokensApiControllerApi{
+    self.tokens_api_controller_api.as_ref()
   }
 
 
