@@ -48,7 +48,6 @@ impl<T> From<serde_json::Error> for Error<T> {
     }
 }
 
-#[allow(unused_imports)]
 use super::models::*;
 
 mod alert_notifications_api;
@@ -75,6 +74,8 @@ mod subscriptions_api;
 pub use self::subscriptions_api::{ SubscriptionsApi, SubscriptionsApiClient };
 mod tag_api_controller_api;
 pub use self::tag_api_controller_api::{ TagApiControllerApi, TagApiControllerApiClient };
+mod tokens_api_controller_api;
+pub use self::tokens_api_controller_api::{ TokensApiControllerApi, TokensApiControllerApiClient };
 
 pub mod configuration;
 pub mod client;
