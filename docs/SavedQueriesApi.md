@@ -1,6 +1,6 @@
 # \SavedQueriesApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *http://localhost*
 
 | Method                                                                                            | HTTP request                                                  | Description                  |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | ---------------------------- |
@@ -10,20 +10,22 @@ All URIs are relative to *https://localhost*
 | [**save_query_using_put**](SavedQueriesApi.md#save_query_using_put)                               | **Put** /users-web/api/v3/savedQueries/{updateableQueryId}    | Update saved query           |
 
 
-# **delete_saved_query_using_delete**
-> ::models::GenericApiResponse delete_saved_query_using_delete(ctx, updateable_query_id)
+
+## delete_saved_query_using_delete
+
+> crate::models::GenericApiResponse delete_saved_query_using_delete(updateable_query_id)
 Delete saved query
 
-### Required Parameters
+### Parameters
 
-| Name                    | Type                | Description                           | Notes                    |
-| ----------------------- | ------------------- | ------------------------------------- | ------------------------ |
-| **ctx**                 | **context.Context** | context containing the authentication | nil if no authentication |
-| **updateable_query_id** | **i64**             | updateableQueryId                     |
+
+| Name                    | Type    | Description       | Required   | Notes |
+| ----------------------- | ------- | ----------------- | ---------- | ----- |
+| **updateable_query_id** | **i64** | updateableQueryId | [required] |
 
 ### Return type
 
-[**::models::GenericApiResponse**](Generic Api Response.md)
+[**crate::models::GenericApiResponse**](Generic Api Response.md)
 
 ### Authorization
 
@@ -31,25 +33,27 @@ Delete saved query
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_saved_queries_for_app_using_get**
-> ::models::GenericApiResponse get_saved_queries_for_app_using_get(ctx, app_id)
+
+## get_saved_queries_for_app_using_get
+
+> crate::models::GenericApiResponse get_saved_queries_for_app_using_get(app_id)
 Get saved queries for an app
 
-### Required Parameters
+### Parameters
 
-| Name       | Type                | Description                           | Notes                    |
-| ---------- | ------------------- | ------------------------------------- | ------------------------ |
-| **ctx**    | **context.Context** | context containing the authentication | nil if no authentication |
-| **app_id** | **i64**             | appId                                 |
+
+| Name       | Type    | Description | Required   | Notes |
+| ---------- | ------- | ----------- | ---------- | ----- |
+| **app_id** | **i64** | appId       | [required] |
 
 ### Return type
 
-[**::models::GenericApiResponse**](Generic Api Response.md)
+[**crate::models::GenericApiResponse**](Generic Api Response.md)
 
 ### Authorization
 
@@ -57,25 +61,27 @@ Get saved queries for an app
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **save_query_using_post**
-> ::models::GenericApiResponse save_query_using_post(ctx, saved_query_dto)
+
+## save_query_using_post
+
+> crate::models::GenericApiResponse save_query_using_post(saved_query_dto)
 Create saved query
 
-### Required Parameters
+### Parameters
 
-| Name                | Type                            | Description                           | Notes                    |
-| ------------------- | ------------------------------- | ------------------------------------- | ------------------------ |
-| **ctx**             | **context.Context**             | context containing the authentication | nil if no authentication |
-| **saved_query_dto** | [**SavedQuery**](SavedQuery.md) | savedQueryDto                         |
+
+| Name                | Type                            | Description   | Required   | Notes |
+| ------------------- | ------------------------------- | ------------- | ---------- | ----- |
+| **saved_query_dto** | [**SavedQuery**](SavedQuery.md) | savedQueryDto | [required] |
 
 ### Return type
 
-[**::models::GenericApiResponse**](Generic Api Response.md)
+[**crate::models::GenericApiResponse**](Generic Api Response.md)
 
 ### Authorization
 
@@ -83,26 +89,28 @@ Create saved query
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **save_query_using_put**
-> ::models::GenericApiResponse save_query_using_put(ctx, saved_query_dto, updateable_query_id)
+
+## save_query_using_put
+
+> crate::models::GenericApiResponse save_query_using_put(updateable_query_id, saved_query_dto)
 Update saved query
 
-### Required Parameters
+### Parameters
 
-| Name                    | Type                            | Description                           | Notes                    |
-| ----------------------- | ------------------------------- | ------------------------------------- | ------------------------ |
-| **ctx**                 | **context.Context**             | context containing the authentication | nil if no authentication |
-| **saved_query_dto**     | [**SavedQuery**](SavedQuery.md) | savedQueryDto                         |
-| **updateable_query_id** | **i64**                         | updateableQueryId                     |
+
+| Name                    | Type                            | Description       | Required   | Notes |
+| ----------------------- | ------------------------------- | ----------------- | ---------- | ----- |
+| **updateable_query_id** | **i64**                         | updateableQueryId | [required] |
+| **saved_query_dto**     | [**SavedQuery**](SavedQuery.md) | savedQueryDto     | [required] |
 
 ### Return type
 
-[**::models::GenericApiResponse**](Generic Api Response.md)
+[**crate::models::GenericApiResponse**](Generic Api Response.md)
 
 ### Authorization
 
@@ -110,7 +118,7 @@ Update saved query
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

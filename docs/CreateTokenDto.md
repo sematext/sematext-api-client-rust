@@ -1,9 +1,10 @@
 # CreateTokenDto
 
 ## Properties
-| Name          | Type     | Description | Notes                        |
-| ------------- | -------- | ----------- | ---------------------------- |
-| **readable**  | **bool** |             | [optional] [default to null] |
-| **writeable** | **bool** |             | [optional] [default to null] |
+
+| Name          | Type             | Description | Notes      |
+| ------------- | ---------------- | ----------- | ---------- |
+| **readable**  | Option<**bool**> |             | [optional] |
+| **writeable** | Option<**bool**> |             | [optional] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

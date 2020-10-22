@@ -1,19 +1,20 @@
 # SubscriptionDto
 
 ## Properties
-| Name                 | Type                                                 | Description | Notes                        |
-| -------------------- | ---------------------------------------------------- | ----------- | ---------------------------- |
-| **addresses**        | **String**                                           |             | [optional] [default to null] |
-| **enable**           | **bool**                                             |             | [optional] [default to null] |
-| **filters**          | **String**                                           |             | [optional] [default to null] |
-| **frequency**        | **String**                                           |             | [optional] [default to null] |
-| **id**               | **i64**                                              |             | [optional] [default to null] |
-| **report_name**      | **String**                                           |             | [optional] [default to null] |
-| **send_time**        | **String**                                           |             | [optional] [default to null] |
-| **subject**          | **String**                                           |             | [optional] [default to null] |
-| **system_id**        | **i64**                                              |             | [optional] [default to null] |
-| **text**             | **String**                                           |             | [optional] [default to null] |
-| **time_range**       | **String**                                           |             | [optional] [default to null] |
-| **user_permissions** | [***::models::UserPermissions**](UserPermissions.md) |             | [optional] [default to null] |
+
+| Name                 | Type                                                             | Description | Notes      |
+| -------------------- | ---------------------------------------------------------------- | ----------- | ---------- |
+| **addresses**        | Option<**String**>                                               |             | [optional] |
+| **enable**           | Option<**bool**>                                                 |             | [optional] |
+| **filters**          | Option<**String**>                                               |             | [optional] |
+| **frequency**        | Option<**String**>                                               |             | [optional] |
+| **id**               | Option<**i64**>                                                  |             | [optional] |
+| **report_name**      | Option<**String**>                                               |             | [optional] |
+| **send_time**        | Option<**String**>                                               |             | [optional] |
+| **subject**          | Option<**String**>                                               |             | [optional] |
+| **system_id**        | Option<**i64**>                                                  |             | [optional] |
+| **text**             | Option<**String**>                                               |             | [optional] |
+| **time_range**       | Option<**String**>                                               |             | [optional] |
+| **user_permissions** | Option<[**crate::models::UserPermissions**](UserPermissions.md)> |             | [optional] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
