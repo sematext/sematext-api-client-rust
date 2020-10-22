@@ -1,6 +1,6 @@
 # \TagApiControllerApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *http://localhost*
 
 | Method                                                                        | HTTP request                                              | Description                                                                                             |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -9,34 +9,28 @@ All URIs are relative to *https://localhost*
 | [**get_using_get3**](TagApiControllerApi.md#get_using_get3)                   | **Get** /spm-reports/api/v3/apps/{appIds}/tags            | Gets values for specified tags for the given application identifiers appearing in the given time frame. |
 
 
-# **get_tag_names_using_get**
-> Value get_tag_names_using_get(ctx, app_ids, optional)
+
+## get_tag_names_using_get
+
+> serde_json::Value get_tag_names_using_get(app_ids, from, to, metrics, logs, events, rum)
 Gets tag names for the given application identifiers appearing in the given time frame.
 
-### Required Parameters
+### Parameters
 
-| Name         | Type                       | Description                           | Notes                    |
-| ------------ | -------------------------- | ------------------------------------- | ------------------------ |
-| **ctx**      | **context.Context**        | context containing the authentication | nil if no authentication |
-| **app_ids**  | **String**                 | appIds                                |
-| **optional** | **map[string]interface{}** | optional parameters                   | nil if no parameters     |
 
-### Optional Parameters
-Optional parameters are passed through a map[string]interface{}.
-
-| Name        | Type       | Description | Notes              |
-| ----------- | ---------- | ----------- | ------------------ |
-| **app_ids** | **String** | appIds      |
-| **from**    | **i64**    | from        |
-| **to**      | **i64**    | to          |
-| **metrics** | **bool**   | metrics     | [default to true]  |
-| **logs**    | **bool**   | logs        | [default to true]  |
-| **events**  | **bool**   | events      | [default to false] |
-| **rum**     | **bool**   | rum         | [default to true]  |
+| Name        | Type             | Description | Required   | Notes              |
+| ----------- | ---------------- | ----------- | ---------- | ------------------ |
+| **app_ids** | **String**       | appIds      | [required] |
+| **from**    | Option<**i64**>  | from        |            |
+| **to**      | Option<**i64**>  | to          |            |
+| **metrics** | Option<**bool**> | metrics     |            | [default to true]  |
+| **logs**    | Option<**bool**> | logs        |            | [default to true]  |
+| **events**  | Option<**bool**> | events      |            | [default to false] |
+| **rum**     | Option<**bool**> | rum         |            | [default to true]  |
 
 ### Return type
 
-[**Value**](Value.md)
+[**serde_json::Value**](serde_json::Value.md)
 
 ### Authorization
 
@@ -44,41 +38,34 @@ Optional parameters are passed through a map[string]interface{}.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_using_get2**
-> Value get_using_get2(ctx, app_ids, tag, optional)
+
+## get_using_get2
+
+> serde_json::Value get_using_get2(app_ids, tag, from, to, metrics, logs, events, rum)
 Gets values for specified tags for the given application identifiers appearing in the given time frame.
 
-### Required Parameters
+### Parameters
 
-| Name         | Type                               | Description                           | Notes                    |
-| ------------ | ---------------------------------- | ------------------------------------- | ------------------------ |
-| **ctx**      | **context.Context**                | context containing the authentication | nil if no authentication |
-| **app_ids**  | **String**                         | appIds                                |
-| **tag**      | [**Vec&lt;String&gt;**](String.md) | tag                                   |
-| **optional** | **map[string]interface{}**         | optional parameters                   | nil if no parameters     |
 
-### Optional Parameters
-Optional parameters are passed through a map[string]interface{}.
-
-| Name        | Type                               | Description | Notes              |
-| ----------- | ---------------------------------- | ----------- | ------------------ |
-| **app_ids** | **String**                         | appIds      |
-| **tag**     | [**Vec&lt;String&gt;**](String.md) | tag         |
-| **from**    | **i64**                            | from        |
-| **to**      | **i64**                            | to          |
-| **metrics** | **bool**                           | metrics     | [default to true]  |
-| **logs**    | **bool**                           | logs        | [default to true]  |
-| **events**  | **bool**                           | events      | [default to false] |
-| **rum**     | **bool**                           | rum         | [default to true]  |
+| Name        | Type                         | Description | Required   | Notes              |
+| ----------- | ---------------------------- | ----------- | ---------- | ------------------ |
+| **app_ids** | **String**                   | appIds      | [required] |
+| **tag**     | [**Vec<String>**](String.md) | tag         | [required] |
+| **from**    | Option<**i64**>              | from        |            |
+| **to**      | Option<**i64**>              | to          |            |
+| **metrics** | Option<**bool**>             | metrics     |            | [default to true]  |
+| **logs**    | Option<**bool**>             | logs        |            | [default to true]  |
+| **events**  | Option<**bool**>             | events      |            | [default to false] |
+| **rum**     | Option<**bool**>             | rum         |            | [default to true]  |
 
 ### Return type
 
-[**Value**](Value.md)
+[**serde_json::Value**](serde_json::Value.md)
 
 ### Authorization
 
@@ -86,41 +73,34 @@ Optional parameters are passed through a map[string]interface{}.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_using_get3**
-> Value get_using_get3(ctx, app_ids, tag, optional)
+
+## get_using_get3
+
+> serde_json::Value get_using_get3(app_ids, tag, from, to, metrics, logs, events, rum)
 Gets values for specified tags for the given application identifiers appearing in the given time frame.
 
-### Required Parameters
+### Parameters
 
-| Name         | Type                               | Description                           | Notes                    |
-| ------------ | ---------------------------------- | ------------------------------------- | ------------------------ |
-| **ctx**      | **context.Context**                | context containing the authentication | nil if no authentication |
-| **app_ids**  | **String**                         | appIds                                |
-| **tag**      | [**Vec&lt;String&gt;**](String.md) | tag                                   |
-| **optional** | **map[string]interface{}**         | optional parameters                   | nil if no parameters     |
 
-### Optional Parameters
-Optional parameters are passed through a map[string]interface{}.
-
-| Name        | Type                               | Description | Notes              |
-| ----------- | ---------------------------------- | ----------- | ------------------ |
-| **app_ids** | **String**                         | appIds      |
-| **tag**     | [**Vec&lt;String&gt;**](String.md) | tag         |
-| **from**    | **i64**                            | from        |
-| **to**      | **i64**                            | to          |
-| **metrics** | **bool**                           | metrics     | [default to true]  |
-| **logs**    | **bool**                           | logs        | [default to true]  |
-| **events**  | **bool**                           | events      | [default to false] |
-| **rum**     | **bool**                           | rum         | [default to true]  |
+| Name        | Type                         | Description | Required   | Notes              |
+| ----------- | ---------------------------- | ----------- | ---------- | ------------------ |
+| **app_ids** | **String**                   | appIds      | [required] |
+| **tag**     | [**Vec<String>**](String.md) | tag         | [required] |
+| **from**    | Option<**i64**>              | from        |            |
+| **to**      | Option<**i64**>              | to          |            |
+| **metrics** | Option<**bool**>             | metrics     |            | [default to true]  |
+| **logs**    | Option<**bool**>             | logs        |            | [default to true]  |
+| **events**  | Option<**bool**>             | events      |            | [default to false] |
+| **rum**     | Option<**bool**>             | rum         |            | [default to true]  |
 
 ### Return type
 
-[**Value**](Value.md)
+[**serde_json::Value**](serde_json::Value.md)
 
 ### Authorization
 
@@ -128,7 +108,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

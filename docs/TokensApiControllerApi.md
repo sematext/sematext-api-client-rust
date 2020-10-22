@@ -1,6 +1,6 @@
 # \TokensApiControllerApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *http://localhost*
 
 | Method                                                                     | HTTP request                                                        | Description                       |
 | -------------------------------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------- |
@@ -11,21 +11,23 @@ All URIs are relative to *https://localhost*
 | [**update_app_token1**](TokensApiControllerApi.md#update_app_token1)       | **Put** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable) |
 
 
-# **create_app_token**
-> ::models::GenericApiResponse create_app_token(ctx, app_id, dto)
+
+## create_app_token
+
+> crate::models::GenericApiResponse create_app_token(app_id, dto)
 Create new app token
 
-### Required Parameters
+### Parameters
 
-| Name       | Type                                    | Description                           | Notes                    |
-| ---------- | --------------------------------------- | ------------------------------------- | ------------------------ |
-| **ctx**    | **context.Context**                     | context containing the authentication | nil if no authentication |
-| **app_id** | **i64**                                 | appId                                 |
-| **dto**    | [**CreateTokenDto**](CreateTokenDto.md) | dto                                   |
+
+| Name       | Type                                    | Description | Required   | Notes |
+| ---------- | --------------------------------------- | ----------- | ---------- | ----- |
+| **app_id** | **i64**                                 | appId       | [required] |
+| **dto**    | [**CreateTokenDto**](CreateTokenDto.md) | dto         | [required] |
 
 ### Return type
 
-[**::models::GenericApiResponse**](Generic Api Response.md)
+[**crate::models::GenericApiResponse**](Generic Api Response.md)
 
 ### Authorization
 
@@ -33,26 +35,28 @@ Create new app token
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_app_token1**
-> ::models::GenericApiResponse delete_app_token1(ctx, app_id, token_id)
+
+## delete_app_token1
+
+> crate::models::GenericApiResponse delete_app_token1(app_id, token_id)
 Delete app token
 
-### Required Parameters
+### Parameters
 
-| Name         | Type                | Description                           | Notes                    |
-| ------------ | ------------------- | ------------------------------------- | ------------------------ |
-| **ctx**      | **context.Context** | context containing the authentication | nil if no authentication |
-| **app_id**   | **i64**             | appId                                 |
-| **token_id** | **i64**             | tokenId                               |
+
+| Name         | Type    | Description | Required   | Notes |
+| ------------ | ------- | ----------- | ---------- | ----- |
+| **app_id**   | **i64** | appId       | [required] |
+| **token_id** | **i64** | tokenId     | [required] |
 
 ### Return type
 
-[**::models::GenericApiResponse**](Generic Api Response.md)
+[**crate::models::GenericApiResponse**](Generic Api Response.md)
 
 ### Authorization
 
@@ -60,25 +64,27 @@ Delete app token
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_app_tokens1**
-> ::models::GenericApiResponse get_app_tokens1(ctx, app_id)
+
+## get_app_tokens1
+
+> crate::models::GenericApiResponse get_app_tokens1(app_id)
 Get app available tokens
 
-### Required Parameters
+### Parameters
 
-| Name       | Type                | Description                           | Notes                    |
-| ---------- | ------------------- | ------------------------------------- | ------------------------ |
-| **ctx**    | **context.Context** | context containing the authentication | nil if no authentication |
-| **app_id** | **i64**             | appId                                 |
+
+| Name       | Type    | Description | Required   | Notes |
+| ---------- | ------- | ----------- | ---------- | ----- |
+| **app_id** | **i64** | appId       | [required] |
 
 ### Return type
 
-[**::models::GenericApiResponse**](Generic Api Response.md)
+[**crate::models::GenericApiResponse**](Generic Api Response.md)
 
 ### Authorization
 
@@ -86,26 +92,28 @@ Get app available tokens
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **regenerate_app_token**
-> ::models::GenericApiResponse regenerate_app_token(ctx, app_id, token_id)
+
+## regenerate_app_token
+
+> crate::models::GenericApiResponse regenerate_app_token(app_id, token_id)
 Regenerate app token)
 
-### Required Parameters
+### Parameters
 
-| Name         | Type                | Description                           | Notes                    |
-| ------------ | ------------------- | ------------------------------------- | ------------------------ |
-| **ctx**      | **context.Context** | context containing the authentication | nil if no authentication |
-| **app_id**   | **i64**             | appId                                 |
-| **token_id** | **i64**             | tokenId                               |
+
+| Name         | Type    | Description | Required   | Notes |
+| ------------ | ------- | ----------- | ---------- | ----- |
+| **app_id**   | **i64** | appId       | [required] |
+| **token_id** | **i64** | tokenId     | [required] |
 
 ### Return type
 
-[**::models::GenericApiResponse**](Generic Api Response.md)
+[**crate::models::GenericApiResponse**](Generic Api Response.md)
 
 ### Authorization
 
@@ -113,27 +121,29 @@ Regenerate app token)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_app_token1**
-> ::models::GenericApiResponse update_app_token1(ctx, app_id, token_id, dto)
+
+## update_app_token1
+
+> crate::models::GenericApiResponse update_app_token1(app_id, token_id, dto)
 Update app token (enable/disable)
 
-### Required Parameters
+### Parameters
 
-| Name         | Type                                    | Description                           | Notes                    |
-| ------------ | --------------------------------------- | ------------------------------------- | ------------------------ |
-| **ctx**      | **context.Context**                     | context containing the authentication | nil if no authentication |
-| **app_id**   | **i64**                                 | appId                                 |
-| **token_id** | **i64**                                 | tokenId                               |
-| **dto**      | [**UpdateTokenDto**](UpdateTokenDto.md) | dto                                   |
+
+| Name         | Type                                    | Description | Required   | Notes |
+| ------------ | --------------------------------------- | ----------- | ---------- | ----- |
+| **app_id**   | **i64**                                 | appId       | [required] |
+| **token_id** | **i64**                                 | tokenId     | [required] |
+| **dto**      | [**UpdateTokenDto**](UpdateTokenDto.md) | dto         | [required] |
 
 ### Return type
 
-[**::models::GenericApiResponse**](Generic Api Response.md)
+[**crate::models::GenericApiResponse**](Generic Api Response.md)
 
 ### Authorization
 
@@ -141,7 +151,7 @@ Update app token (enable/disable)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

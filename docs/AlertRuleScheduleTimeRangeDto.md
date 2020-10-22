@@ -1,9 +1,10 @@
 # AlertRuleScheduleTimeRangeDto
 
 ## Properties
-| Name      | Type       | Description | Notes                        |
-| --------- | ---------- | ----------- | ---------------------------- |
-| **end**   | **String** |             | [optional] [default to null] |
-| **start** | **String** |             | [optional] [default to null] |
+
+| Name      | Type               | Description | Notes      |
+| --------- | ------------------ | ----------- | ---------- |
+| **end**   | Option<**String**> |             | [optional] |
+| **start** | Option<**String**> |             | [optional] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
