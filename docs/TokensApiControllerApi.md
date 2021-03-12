@@ -2,13 +2,13 @@
 
 All URIs are relative to *https://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**create_app_token**](TokensApiControllerApi.md#create_app_token) | **Post** /users-web/api/v3/apps/{appId}/tokens | Create new app token
-[**delete_app_token1**](TokensApiControllerApi.md#delete_app_token1) | **Delete** /users-web/api/v3/apps/{appId}/tokens/{tokenId} | Delete app token
-[**get_app_tokens1**](TokensApiControllerApi.md#get_app_tokens1) | **Get** /users-web/api/v3/apps/{appId}/tokens | Get app available tokens
-[**regenerate_app_token1**](TokensApiControllerApi.md#regenerate_app_token1) | **Post** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)
-[**update_app_token**](TokensApiControllerApi.md#update_app_token) | **Put** /users-web/api/v3/apps/{appId}/tokens/{tokenId} | Update app token (enable/disable or name)
+| Method                                                                       | HTTP request                                                        | Description                               |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- |
+| [**create_app_token**](TokensApiControllerApi.md#create_app_token)           | **Post** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token                      |
+| [**delete_app_token1**](TokensApiControllerApi.md#delete_app_token1)         | **Delete** /users-web/api/v3/apps/{appId}/tokens/{tokenId}          | Delete app token                          |
+| [**get_app_tokens1**](TokensApiControllerApi.md#get_app_tokens1)             | **Get** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens                  |
+| [**regenerate_app_token1**](TokensApiControllerApi.md#regenerate_app_token1) | **Post** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)                     |
+| [**update_app_token**](TokensApiControllerApi.md#update_app_token)           | **Put** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable or name) |
 
 
 # **create_app_token**
@@ -17,11 +17,11 @@ Create new app token
 
 ### Required Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **app_id** | **i64**| appId | 
-  **dto** | [**CreateTokenDto**](CreateTokenDto.md)| dto | 
+| Name       | Type                                    | Description                           | Notes                    |
+| ---------- | --------------------------------------- | ------------------------------------- | ------------------------ |
+| **ctx**    | **context.Context**                     | context containing the authentication | nil if no authentication |
+| **app_id** | **i64**                                 | appId                                 |
+| **dto**    | [**CreateTokenDto**](CreateTokenDto.md) | dto                                   |
 
 ### Return type
 
@@ -44,11 +44,11 @@ Delete app token
 
 ### Required Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **app_id** | **i64**| appId | 
-  **token_id** | **i64**| tokenId | 
+| Name         | Type                | Description                           | Notes                    |
+| ------------ | ------------------- | ------------------------------------- | ------------------------ |
+| **ctx**      | **context.Context** | context containing the authentication | nil if no authentication |
+| **app_id**   | **i64**             | appId                                 |
+| **token_id** | **i64**             | tokenId                               |
 
 ### Return type
 
@@ -71,10 +71,10 @@ Get app available tokens
 
 ### Required Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **app_id** | **i64**| appId | 
+| Name       | Type                | Description                           | Notes                    |
+| ---------- | ------------------- | ------------------------------------- | ------------------------ |
+| **ctx**    | **context.Context** | context containing the authentication | nil if no authentication |
+| **app_id** | **i64**             | appId                                 |
 
 ### Return type
 
@@ -97,11 +97,11 @@ Regenerate app token)
 
 ### Required Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **app_id** | **i64**| appId | 
-  **token_id** | **i64**| tokenId | 
+| Name         | Type                | Description                           | Notes                    |
+| ------------ | ------------------- | ------------------------------------- | ------------------------ |
+| **ctx**      | **context.Context** | context containing the authentication | nil if no authentication |
+| **app_id**   | **i64**             | appId                                 |
+| **token_id** | **i64**             | tokenId                               |
 
 ### Return type
 
@@ -124,12 +124,12 @@ Update app token (enable/disable or name)
 
 ### Required Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **app_id** | **i64**| appId | 
-  **token_id** | **i64**| tokenId | 
-  **dto** | [**UpdateTokenDto**](UpdateTokenDto.md)| dto | 
+| Name         | Type                                    | Description                           | Notes                    |
+| ------------ | --------------------------------------- | ------------------------------------- | ------------------------ |
+| **ctx**      | **context.Context**                     | context containing the authentication | nil if no authentication |
+| **app_id**   | **i64**                                 | appId                                 |
+| **token_id** | **i64**                                 | tokenId                               |
+| **dto**      | [**UpdateTokenDto**](UpdateTokenDto.md) | dto                                   |
 
 ### Return type
 
@@ -145,4 +145,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

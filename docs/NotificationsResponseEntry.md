@@ -1,12 +1,10 @@
 # NotificationsResponseEntry
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**end** | **String** |  | [optional] [default to null]
-**notifications** | [**Vec<::models::AlertNotification>**](AlertNotification.md) |  | [optional] [default to null]
-**start** | **String** |  | [optional] [default to null]
+| Name              | Type                                                         | Description | Notes                        |
+| ----------------- | ------------------------------------------------------------ | ----------- | ---------------------------- |
+| **end**           | **String**                                                   |             | [optional] [default to null] |
+| **notifications** | [**Vec<::models::AlertNotification>**](AlertNotification.md) |             | [optional] [default to null] |
+| **start**         | **String**                                                   |             | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
