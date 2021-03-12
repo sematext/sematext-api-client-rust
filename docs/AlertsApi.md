@@ -1,32 +1,30 @@
 # \AlertsApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://localhost*
 
-| Method                                                                                    | HTTP request                                                 | Description                |
-| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------- |
-| [**create_alert_using_post1**](AlertsApi.md#create_alert_using_post1)                     | **Post** /users-web/api/v3/alerts                            | Create alert rule          |
-| [**delete_alert_rule_using_delete1**](AlertsApi.md#delete_alert_rule_using_delete1)       | **Delete** /users-web/api/v3/alerts/{updateableAlertId}      | Delete alert rule          |
-| [**disable_alert_rule_using_put**](AlertsApi.md#disable_alert_rule_using_put)             | **Put** /users-web/api/v3/alerts/{updateableAlertId}/disable | Disable alert rule         |
-| [**enable_alert_rule_using_put1**](AlertsApi.md#enable_alert_rule_using_put1)             | **Put** /users-web/api/v3/alerts/{updateableAlertId}/enable  | Enable alert rule          |
-| [**get_alert_rules_for_app_using_get1**](AlertsApi.md#get_alert_rules_for_app_using_get1) | **Get** /users-web/api/v3/apps/{appId}/alerts                | Get alert rules for an app |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**create_alert_using_post1**](AlertsApi.md#create_alert_using_post1) | **Post** /users-web/api/v3/alerts | Create alert rule
+[**delete_alert_rule_using_delete1**](AlertsApi.md#delete_alert_rule_using_delete1) | **Delete** /users-web/api/v3/alerts/{updateableAlertId} | Delete alert rule
+[**disable_alert_rule_using_put1**](AlertsApi.md#disable_alert_rule_using_put1) | **Put** /users-web/api/v3/alerts/{updateableAlertId}/disable | Disable alert rule
+[**enable_alert_rule_using_put1**](AlertsApi.md#enable_alert_rule_using_put1) | **Put** /users-web/api/v3/alerts/{updateableAlertId}/enable | Enable alert rule
+[**get_alert_rules_for_app_using_get**](AlertsApi.md#get_alert_rules_for_app_using_get) | **Get** /users-web/api/v3/apps/{appId}/alerts | Get alert rules for an app
 
 
-
-## create_alert_using_post1
-
-> crate::models::GenericApiResponse create_alert_using_post1(dto)
+# **create_alert_using_post1**
+> ::models::AlertRuleResponse create_alert_using_post1(ctx, dto)
 Create alert rule
 
-### Parameters
+### Required Parameters
 
-
-| Name    | Type                          | Description | Required   | Notes |
-| ------- | ----------------------------- | ----------- | ---------- | ----- |
-| **dto** | [**AlertRule**](AlertRule.md) | dto         | [required] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **dto** | [**AlertRule**](AlertRule.md)| dto | 
 
 ### Return type
 
-[**crate::models::GenericApiResponse**](Generic Api Response.md)
+[**::models::AlertRuleResponse**](AlertRuleResponse.md)
 
 ### Authorization
 
@@ -34,27 +32,25 @@ Create alert rule
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## delete_alert_rule_using_delete1
-
-> crate::models::GenericApiResponse delete_alert_rule_using_delete1(updateable_alert_id)
+# **delete_alert_rule_using_delete1**
+> ::models::GenericMapBasedApiResponse delete_alert_rule_using_delete1(ctx, updateable_alert_id)
 Delete alert rule
 
-### Parameters
+### Required Parameters
 
-
-| Name                    | Type    | Description       | Required   | Notes |
-| ----------------------- | ------- | ----------------- | ---------- | ----- |
-| **updateable_alert_id** | **i64** | updateableAlertId | [required] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **updateable_alert_id** | **i64**| updateableAlertId | 
 
 ### Return type
 
-[**crate::models::GenericApiResponse**](Generic Api Response.md)
+[**::models::GenericMapBasedApiResponse**](Generic Map Based Api Response.md)
 
 ### Authorization
 
@@ -62,27 +58,25 @@ Delete alert rule
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## disable_alert_rule_using_put
-
-> crate::models::GenericApiResponse disable_alert_rule_using_put(updateable_alert_id)
+# **disable_alert_rule_using_put1**
+> ::models::GenericMapBasedApiResponse disable_alert_rule_using_put1(ctx, updateable_alert_id)
 Disable alert rule
 
-### Parameters
+### Required Parameters
 
-
-| Name                    | Type    | Description       | Required   | Notes |
-| ----------------------- | ------- | ----------------- | ---------- | ----- |
-| **updateable_alert_id** | **i64** | updateableAlertId | [required] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **updateable_alert_id** | **i64**| updateableAlertId | 
 
 ### Return type
 
-[**crate::models::GenericApiResponse**](Generic Api Response.md)
+[**::models::GenericMapBasedApiResponse**](Generic Map Based Api Response.md)
 
 ### Authorization
 
@@ -90,27 +84,25 @@ Disable alert rule
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## enable_alert_rule_using_put1
-
-> crate::models::GenericApiResponse enable_alert_rule_using_put1(updateable_alert_id)
+# **enable_alert_rule_using_put1**
+> ::models::GenericMapBasedApiResponse enable_alert_rule_using_put1(ctx, updateable_alert_id)
 Enable alert rule
 
-### Parameters
+### Required Parameters
 
-
-| Name                    | Type    | Description       | Required   | Notes |
-| ----------------------- | ------- | ----------------- | ---------- | ----- |
-| **updateable_alert_id** | **i64** | updateableAlertId | [required] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **updateable_alert_id** | **i64**| updateableAlertId | 
 
 ### Return type
 
-[**crate::models::GenericApiResponse**](Generic Api Response.md)
+[**::models::GenericMapBasedApiResponse**](Generic Map Based Api Response.md)
 
 ### Authorization
 
@@ -118,27 +110,25 @@ Enable alert rule
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## get_alert_rules_for_app_using_get1
-
-> crate::models::GenericApiResponse get_alert_rules_for_app_using_get1(app_id)
+# **get_alert_rules_for_app_using_get**
+> ::models::AlertRulesResponse get_alert_rules_for_app_using_get(ctx, app_id)
 Get alert rules for an app
 
-### Parameters
+### Required Parameters
 
-
-| Name       | Type    | Description | Required   | Notes |
-| ---------- | ------- | ----------- | ---------- | ----- |
-| **app_id** | **i64** | appId       | [required] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **app_id** | **i64**| appId | 
 
 ### Return type
 
-[**crate::models::GenericApiResponse**](Generic Api Response.md)
+[**::models::AlertRulesResponse**](AlertRulesResponse.md)
 
 ### Authorization
 
@@ -146,7 +136,8 @@ Get alert rules for an app
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
