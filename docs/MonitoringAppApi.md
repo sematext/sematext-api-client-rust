@@ -1,28 +1,26 @@
 # \MonitoringAppApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://localhost*
 
-| Method                                                                   | HTTP request                      | Description           |
-| ------------------------------------------------------------------------ | --------------------------------- | --------------------- |
-| [**create_spm_application**](MonitoringAppApi.md#create_spm_application) | **Post** /spm-reports/api/v3/apps | Create Monitoring App |
+| Method                                                                     | HTTP request                      | Description           |
+| -------------------------------------------------------------------------- | --------------------------------- | --------------------- |
+| [**create_spm_application1**](MonitoringAppApi.md#create_spm_application1) | **Post** /spm-reports/api/v3/apps | Create Monitoring App |
 
 
-
-## create_spm_application
-
-> crate::models::GenericApiResponse create_spm_application(application_details)
+# **create_spm_application1**
+> ::models::AppsResponse create_spm_application1(ctx, application_details)
 Create Monitoring App
 
-### Parameters
+### Required Parameters
 
-
-| Name                    | Type                                  | Description                              | Required   | Notes |
-| ----------------------- | ------------------------------------- | ---------------------------------------- | ---------- | ----- |
-| **application_details** | [**CreateAppInfo**](CreateAppInfo.md) | Details of the application to be created | [required] |
+| Name                    | Type                                  | Description                              | Notes                    |
+| ----------------------- | ------------------------------------- | ---------------------------------------- | ------------------------ |
+| **ctx**                 | **context.Context**                   | context containing the authentication    | nil if no authentication |
+| **application_details** | [**CreateAppInfo**](CreateAppInfo.md) | Details of the application to be created |
 
 ### Return type
 
-[**crate::models::GenericApiResponse**](Generic Api Response.md)
+[**::models::AppsResponse**](AppsResponse.md)
 
 ### Authorization
 
@@ -30,7 +28,7 @@ Create Monitoring App
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

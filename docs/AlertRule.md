@@ -1,56 +1,55 @@
 # AlertRule
 
 ## Properties
-
-| Name                                           | Type                                                                                          | Description | Notes                |
-| ---------------------------------------------- | --------------------------------------------------------------------------------------------- | ----------- | -------------------- |
-| **account_email**                              | Option<**String**>                                                                            |             | [optional][readonly] |
-| **allowed_app_types**                          | Option<**Vec<i64>**>                                                                          |             | [optional]           |
-| **analyzing_time**                             | Option<**String**>                                                                            |             | [optional]           |
-| **app_display_state**                          | Option<**String**>                                                                            |             | [optional][readonly] |
-| **app_id**                                     | Option<**i64**>                                                                               |             | [optional]           |
-| **app_name**                                   | Option<**String**>                                                                            |             | [optional][readonly] |
-| **app_state**                                  | Option<**String**>                                                                            |             | [optional][readonly] |
-| **app_token**                                  | Option<**String**>                                                                            |             | [optional][readonly] |
-| **app_type**                                   | Option<**String**>                                                                            |             | [optional][readonly] |
-| **back_to_normal_needed**                      | Option<**bool**>                                                                              |             | [optional]           |
-| **chart_key**                                  | Option<**String**>                                                                            |             | [optional]           |
-| **color**                                      | Option<**String**>                                                                            |             | [optional]           |
-| **creator_email**                              | Option<**String**>                                                                            |             | [optional][readonly] |
-| **default_agg_type**                           | Option<**String**>                                                                            |             | [optional][readonly] |
-| **description**                                | Option<**String**>                                                                            |             | [optional]           |
-| **disallowed_app_types**                       | Option<**Vec<i64>**>                                                                          |             | [optional]           |
-| **enabled**                                    | Option<**bool**>                                                                              |             | [optional]           |
-| **estimate_operation**                         | Option<**String**>                                                                            |             | [optional]           |
-| **estimate_value**                             | Option<**f64**>                                                                               |             | [optional]           |
-| **filter_values**                              | Option<**String**>                                                                            |             | [optional]           |
-| **filter_values_obj**                          | Option<[**Vec<crate::models::FilterValue>**](FilterValue.md)>                                 |             | [optional]           |
-| **ignore_regular_events_enabled**              | Option<**bool**>                                                                              |             | [optional]           |
-| **integrations**                               | Option<**String**>                                                                            |             | [optional][readonly] |
-| **last_data_received_date**                    | Option<**i64**>                                                                               |             | [optional][readonly] |
-| **last_sent**                                  | Option<**i64**>                                                                               |             | [optional][readonly] |
-| **last_triggered**                             | Option<**i64**>                                                                               |             | [optional][readonly] |
-| **metadata**                                   | Option<[**serde_json::Value**](.md)>                                                          |             | [optional]           |
-| **metric_key**                                 | Option<**String**>                                                                            |             | [optional][readonly] |
-| **metric_label**                               | Option<**String**>                                                                            |             | [optional]           |
-| **min_delay_between_notifications_in_minutes** | Option<**String**>                                                                            |             | [optional]           |
-| **name**                                       | Option<**String**>                                                                            |             | [optional]           |
-| **notification_emails**                        | Option<**Vec<String>**>                                                                       |             | [optional]           |
-| **notification_integrations**                  | Option<[**Vec<crate::models::NotificationIntegration>**](NotificationIntegration.md)>         |             | [optional]           |
-| **notifications_enabled**                      | Option<**bool**>                                                                              |             | [optional]           |
-| **query**                                      | Option<**String**>                                                                            |             | [optional]           |
-| **report_name**                                | Option<**String**>                                                                            |             | [optional]           |
-| **rule_key**                                   | Option<**i64**>                                                                               |             | [optional][readonly] |
-| **rule_type**                                  | Option<**String**>                                                                            |             | [optional]           |
-| **runbook**                                    | Option<**String**>                                                                            |             | [optional]           |
-| **saved_query_id**                             | Option<**i64**>                                                                               |             | [optional][readonly] |
-| **schedule**                                   | Option<[**Vec<crate::models::AlertRuleScheduleWeekdayDto>**](AlertRuleScheduleWeekdayDto.md)> |             | [optional]           |
-| **sematext_service**                           | Option<**String**>                                                                            |             | [optional][readonly] |
-| **send_to_email**                              | Option<**String**>                                                                            |             | [optional]           |
-| **timezone**                                   | Option<**String**>                                                                            |             | [optional]           |
-| **use_only_alert_rule_integrations**           | Option<**bool**>                                                                              |             | [optional]           |
-| **user_permissions**                           | Option<[**crate::models::UserPermissions**](UserPermissions.md)>                              |             | [optional]           |
-| **value_column_name**                          | Option<**String**>                                                                            |             | [optional][readonly] |
-| **value_name**                                 | Option<**String**>                                                                            |             | [optional][readonly] |
+| Name                                           | Type                                                                             | Description | Notes                        |
+| ---------------------------------------------- | -------------------------------------------------------------------------------- | ----------- | ---------------------------- |
+| **account_email**                              | **String**                                                                       |             | [optional] [default to null] |
+| **allowed_app_types**                          | **Vec<i64>**                                                                     |             | [optional] [default to null] |
+| **analyzing_time**                             | **String**                                                                       |             | [optional] [default to null] |
+| **app_display_state**                          | **String**                                                                       |             | [optional] [default to null] |
+| **app_id**                                     | **i64**                                                                          |             | [optional] [default to null] |
+| **app_name**                                   | **String**                                                                       |             | [optional] [default to null] |
+| **app_state**                                  | **String**                                                                       |             | [optional] [default to null] |
+| **app_token**                                  | **String**                                                                       |             | [optional] [default to null] |
+| **app_type**                                   | **String**                                                                       |             | [optional] [default to null] |
+| **back_to_normal_needed**                      | **bool**                                                                         |             | [optional] [default to null] |
+| **chart_key**                                  | **String**                                                                       |             | [optional] [default to null] |
+| **color**                                      | **String**                                                                       |             | [optional] [default to null] |
+| **creator_email**                              | **String**                                                                       |             | [optional] [default to null] |
+| **default_agg_type**                           | **String**                                                                       |             | [optional] [default to null] |
+| **description**                                | **String**                                                                       |             | [optional] [default to null] |
+| **disallowed_app_types**                       | **Vec<i64>**                                                                     |             | [optional] [default to null] |
+| **enabled**                                    | **bool**                                                                         |             | [optional] [default to null] |
+| **estimate_operation**                         | **String**                                                                       |             | [optional] [default to null] |
+| **estimate_value**                             | **f64**                                                                          |             | [optional] [default to null] |
+| **filter_values**                              | **String**                                                                       |             | [optional] [default to null] |
+| **filter_values_obj**                          | [**Vec<::models::FilterValue>**](FilterValue.md)                                 |             | [optional] [default to null] |
+| **ignore_regular_events_enabled**              | **bool**                                                                         |             | [optional] [default to null] |
+| **integrations**                               | **String**                                                                       |             | [optional] [default to null] |
+| **last_data_received_date**                    | **i64**                                                                          |             | [optional] [default to null] |
+| **last_sent**                                  | **i64**                                                                          |             | [optional] [default to null] |
+| **last_triggered**                             | **i64**                                                                          |             | [optional] [default to null] |
+| **metadata**                                   | [***Value**](Value.md)                                                           |             | [optional] [default to null] |
+| **metric_key**                                 | **String**                                                                       |             | [optional] [default to null] |
+| **metric_label**                               | **String**                                                                       |             | [optional] [default to null] |
+| **min_delay_between_notifications_in_minutes** | **String**                                                                       |             | [optional] [default to null] |
+| **name**                                       | **String**                                                                       |             | [optional] [default to null] |
+| **notification_emails**                        | **Vec<String>**                                                                  |             | [optional] [default to null] |
+| **notification_integrations**                  | [**Vec<::models::NotificationIntegration>**](NotificationIntegration.md)         |             | [optional] [default to null] |
+| **notifications_enabled**                      | **bool**                                                                         |             | [optional] [default to null] |
+| **query**                                      | **String**                                                                       |             | [optional] [default to null] |
+| **report_name**                                | **String**                                                                       |             | [optional] [default to null] |
+| **rule_key**                                   | **i64**                                                                          |             | [optional] [default to null] |
+| **rule_type**                                  | **String**                                                                       |             | [optional] [default to null] |
+| **runbook**                                    | **String**                                                                       |             | [optional] [default to null] |
+| **saved_query_id**                             | **i64**                                                                          |             | [optional] [default to null] |
+| **schedule**                                   | [**Vec<::models::AlertRuleScheduleWeekdayDto>**](AlertRuleScheduleWeekdayDto.md) |             | [optional] [default to null] |
+| **sematext_service**                           | **String**                                                                       |             | [optional] [default to null] |
+| **send_to_email**                              | **String**                                                                       |             | [optional] [default to null] |
+| **timezone**                                   | **String**                                                                       |             | [optional] [default to null] |
+| **use_only_alert_rule_integrations**           | **bool**                                                                         |             | [optional] [default to null] |
+| **user_permissions**                           | [***::models::UserPermissions**](UserPermissions.md)                             |             | [optional] [default to null] |
+| **value_column_name**                          | **String**                                                                       |             | [optional] [default to null] |
+| **value_name**                                 | **String**                                                                       |             | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

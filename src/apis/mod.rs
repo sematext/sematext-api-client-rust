@@ -4,7 +4,6 @@ use serde_json;
 
 #[derive(Debug)]
 pub enum Error<T> {
-    UriError(hyper::error::UriError),
     Hyper(hyper::Error),
     Serde(serde_json::Error),
     ApiError(ApiError<T>),
@@ -49,7 +48,7 @@ impl<T> From<serde_json::Error> for Error<T> {
     }
 }
 
-mod request;
+use super::models::*;
 
 mod alert_notifications_api;
 pub use self::alert_notifications_api::{ AlertNotificationsApi, AlertNotificationsApiClient };
@@ -63,14 +62,12 @@ mod billing_api;
 pub use self::billing_api::{ BillingApi, BillingApiClient };
 mod logs_app_api;
 pub use self::logs_app_api::{ LogsAppApi, LogsAppApiClient };
-mod metrics_api;
-pub use self::metrics_api::{ MetricsApi, MetricsApiClient };
+mod logs_usage_api_controller_api;
+pub use self::logs_usage_api_controller_api::{ LogsUsageApiControllerApi, LogsUsageApiControllerApiClient };
 mod monitoring_app_api;
 pub use self::monitoring_app_api::{ MonitoringAppApi, MonitoringAppApiClient };
 mod reset_password_api;
 pub use self::reset_password_api::{ ResetPasswordApi, ResetPasswordApiClient };
-mod saved_queries_api;
-pub use self::saved_queries_api::{ SavedQueriesApi, SavedQueriesApiClient };
 mod subscriptions_api;
 pub use self::subscriptions_api::{ SubscriptionsApi, SubscriptionsApiClient };
 mod tag_api_controller_api;

@@ -1,18 +1,17 @@
 # Invitation
 
 ## Properties
-
-| Name               | Type                                          | Description                                       | Notes                |
-| ------------------ | --------------------------------------------- | ------------------------------------------------- | -------------------- |
-| **app**            | Option<[**crate::models::App**](App.md)>      |                                                   | [optional]           |
-| **apps**           | Option<[**Vec<crate::models::App>**](App.md)> | For invite request, only apps.id needs to be set. | [optional]           |
-| **id**             | Option<**i64**>                               |                                                   | [optional][readonly] |
-| **invite_date**    | Option<**String**>                            |                                                   | [optional][readonly] |
-| **invite_status**  | Option<**String**>                            |                                                   | [optional][readonly] |
-| **invitee_email**  | Option<**String**>                            |                                                   | [optional]           |
-| **invitee_role**   | Option<**String**>                            |                                                   | [optional]           |
-| **invitee_status** | Option<**String**>                            |                                                   | [optional][readonly] |
-| **inviter_email**  | Option<**String**>                            |                                                   | [optional][readonly] |
-| **uuid**           | Option<**String**>                            |                                                   | [optional][readonly] |
+| Name               | Type                             | Description                                       | Notes                        |
+| ------------------ | -------------------------------- | ------------------------------------------------- | ---------------------------- |
+| **app**            | [***::models::App**](App.md)     | For invite request, only app.id needs to be set.  | [optional] [default to null] |
+| **apps**           | [**Vec<::models::App>**](App.md) | For invite request, only apps.id needs to be set. | [optional] [default to null] |
+| **id**             | **i64**                          |                                                   | [optional] [default to null] |
+| **invite_date**    | **String**                       |                                                   | [optional] [default to null] |
+| **invite_status**  | **String**                       |                                                   | [optional] [default to null] |
+| **invitee_email**  | **String**                       |                                                   | [optional] [default to null] |
+| **invitee_role**   | **String**                       |                                                   | [optional] [default to null] |
+| **invitee_status** | **String**                       |                                                   | [optional] [default to null] |
+| **inviter_email**  | **String**                       |                                                   | [optional] [default to null] |
+| **uuid**           | **String**                       |                                                   | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
