@@ -35,12 +35,12 @@ impl<C: hyper::client::Connect> SubscriptionsApiClient<C> {
 }
 
 pub trait SubscriptionsApi {
-    fn create_for_app_using_post1(&self, app_id: i64, subscription: ::models::SubscriptionDto) -> Box<Future<Item = ::models::SubscriptionResponse, Error = Error<serde_json::Value>>>;
-    fn create_for_dash_using_post(&self, dash_id: i64, subscription: ::models::SubscriptionDashboardDto) -> Box<Future<Item = ::models::SubscriptionResponse, Error = Error<serde_json::Value>>>;
+    fn create_for_app_using_post(&self, app_id: i64, subscription: ::models::SubscriptionDto) -> Box<Future<Item = ::models::SubscriptionResponse, Error = Error<serde_json::Value>>>;
+    fn create_for_dash_using_post1(&self, dash_id: i64, subscription: ::models::SubscriptionDashboardDto) -> Box<Future<Item = ::models::SubscriptionResponse, Error = Error<serde_json::Value>>>;
     fn delete_using_delete2(&self, updateable_subscription_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>>;
-    fn list_using_get2(&self, app_id: i64) -> Box<Future<Item = ::models::SubscriptionsResponse, Error = Error<serde_json::Value>>>;
+    fn list_using_get3(&self, app_id: i64) -> Box<Future<Item = ::models::SubscriptionsResponse, Error = Error<serde_json::Value>>>;
     fn list_using_get5(&self, ) -> Box<Future<Item = ::models::SubscriptionsResponse, Error = Error<serde_json::Value>>>;
-    fn send_app_report_using_post1(&self, app_id: i64, email_dto: ::models::ReportInfo) -> Box<Future<Item = ::models::MailReportResponse, Error = Error<serde_json::Value>>>;
+    fn send_app_report_using_post(&self, app_id: i64, email_dto: ::models::ReportInfo) -> Box<Future<Item = ::models::MailReportResponse, Error = Error<serde_json::Value>>>;
     fn send_dash_report_using_post(&self, dash_id: i64, email_dto: ::models::ReportInfo) -> Box<Future<Item = ::models::MailReportResponse, Error = Error<serde_json::Value>>>;
     fn toggle_enabled_using_put1(&self, updateable_subscription_id: i64, dto: ::models::UpdateSubscriptionDto) -> Box<Future<Item = ::models::SubscriptionResponse, Error = Error<serde_json::Value>>>;
     fn update_for_app_using_put(&self, app_id: i64, subscription: ::models::SubscriptionDto) -> Box<Future<Item = ::models::SubscriptionResponse, Error = Error<serde_json::Value>>>;
@@ -49,7 +49,7 @@ pub trait SubscriptionsApi {
 
 
 impl<C: hyper::client::Connect>SubscriptionsApi for SubscriptionsApiClient<C> {
-    fn create_for_app_using_post1(&self, app_id: i64, subscription: ::models::SubscriptionDto) -> Box<Future<Item = ::models::SubscriptionResponse, Error = Error<serde_json::Value>>> {
+    fn create_for_app_using_post(&self, app_id: i64, subscription: ::models::SubscriptionDto) -> Box<Future<Item = ::models::SubscriptionResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
@@ -119,7 +119,7 @@ impl<C: hyper::client::Connect>SubscriptionsApi for SubscriptionsApiClient<C> {
         )
     }
 
-    fn create_for_dash_using_post(&self, dash_id: i64, subscription: ::models::SubscriptionDashboardDto) -> Box<Future<Item = ::models::SubscriptionResponse, Error = Error<serde_json::Value>>> {
+    fn create_for_dash_using_post1(&self, dash_id: i64, subscription: ::models::SubscriptionDashboardDto) -> Box<Future<Item = ::models::SubscriptionResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
@@ -255,7 +255,7 @@ impl<C: hyper::client::Connect>SubscriptionsApi for SubscriptionsApiClient<C> {
         )
     }
 
-    fn list_using_get2(&self, app_id: i64) -> Box<Future<Item = ::models::SubscriptionsResponse, Error = Error<serde_json::Value>>> {
+    fn list_using_get3(&self, app_id: i64) -> Box<Future<Item = ::models::SubscriptionsResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
@@ -387,7 +387,7 @@ impl<C: hyper::client::Connect>SubscriptionsApi for SubscriptionsApiClient<C> {
         )
     }
 
-    fn send_app_report_using_post1(&self, app_id: i64, email_dto: ::models::ReportInfo) -> Box<Future<Item = ::models::MailReportResponse, Error = Error<serde_json::Value>>> {
+    fn send_app_report_using_post(&self, app_id: i64, email_dto: ::models::ReportInfo) -> Box<Future<Item = ::models::MailReportResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();

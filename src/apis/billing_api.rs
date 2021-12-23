@@ -36,7 +36,7 @@ impl<C: hyper::client::Connect> BillingApiClient<C> {
 
 pub trait BillingApi {
     fn get_detailed_invoice_using_get(&self, service: &str, year: i32, month: i32) -> Box<Future<Item = ::models::InvoiceResponse, Error = Error<serde_json::Value>>>;
-    fn list_available_plans_using_get(&self, integration_id: i64, app_type: &str) -> Box<Future<Item = ::models::PlansResponse, Error = Error<serde_json::Value>>>;
+    fn list_available_plans_using_get1(&self, integration_id: i64, app_type: &str) -> Box<Future<Item = ::models::PlansResponse, Error = Error<serde_json::Value>>>;
     fn update_plan_using_put(&self, app_id: i64, dto: ::models::BillingInfo) -> Box<Future<Item = ::models::UpdatePlanResponse, Error = Error<serde_json::Value>>>;
 }
 
@@ -108,7 +108,7 @@ impl<C: hyper::client::Connect>BillingApi for BillingApiClient<C> {
         )
     }
 
-    fn list_available_plans_using_get(&self, integration_id: i64, app_type: &str) -> Box<Future<Item = ::models::PlansResponse, Error = Error<serde_json::Value>>> {
+    fn list_available_plans_using_get1(&self, integration_id: i64, app_type: &str) -> Box<Future<Item = ::models::PlansResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();

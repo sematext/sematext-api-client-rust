@@ -24,12 +24,16 @@ pub struct MinPeriodFeePeriod {
   http_monitors: Option<i32>,
   #[serde(rename = "id")]
   id: Option<i64>,
+  #[serde(rename = "ingestionPeriodFeeAmount")]
+  ingestion_period_fee_amount: Option<f32>,
   #[serde(rename = "minPeriodFeeAmount")]
   min_period_fee_amount: Option<f32>,
   #[serde(rename = "overagePercentage")]
   overage_percentage: Option<f32>,
   #[serde(rename = "planDataLimit")]
   plan_data_limit: Option<i64>,
+  #[serde(rename = "storagePeriodFeeAmount")]
+  storage_period_fee_amount: Option<f32>,
   #[serde(rename = "toDate")]
   to_date: Option<String>,
   #[serde(rename = "usedPlan")]
@@ -46,9 +50,11 @@ impl MinPeriodFeePeriod {
       from_date: None,
       http_monitors: None,
       id: None,
+      ingestion_period_fee_amount: None,
       min_period_fee_amount: None,
       overage_percentage: None,
       plan_data_limit: None,
+      storage_period_fee_amount: None,
       to_date: None,
       used_plan: None,
       used_plan_period_fee: None
@@ -140,6 +146,23 @@ impl MinPeriodFeePeriod {
     self.id = None;
   }
 
+  pub fn set_ingestion_period_fee_amount(&mut self, ingestion_period_fee_amount: f32) {
+    self.ingestion_period_fee_amount = Some(ingestion_period_fee_amount);
+  }
+
+  pub fn with_ingestion_period_fee_amount(mut self, ingestion_period_fee_amount: f32) -> MinPeriodFeePeriod {
+    self.ingestion_period_fee_amount = Some(ingestion_period_fee_amount);
+    self
+  }
+
+  pub fn ingestion_period_fee_amount(&self) -> Option<&f32> {
+    self.ingestion_period_fee_amount.as_ref()
+  }
+
+  pub fn reset_ingestion_period_fee_amount(&mut self) {
+    self.ingestion_period_fee_amount = None;
+  }
+
   pub fn set_min_period_fee_amount(&mut self, min_period_fee_amount: f32) {
     self.min_period_fee_amount = Some(min_period_fee_amount);
   }
@@ -189,6 +212,23 @@ impl MinPeriodFeePeriod {
 
   pub fn reset_plan_data_limit(&mut self) {
     self.plan_data_limit = None;
+  }
+
+  pub fn set_storage_period_fee_amount(&mut self, storage_period_fee_amount: f32) {
+    self.storage_period_fee_amount = Some(storage_period_fee_amount);
+  }
+
+  pub fn with_storage_period_fee_amount(mut self, storage_period_fee_amount: f32) -> MinPeriodFeePeriod {
+    self.storage_period_fee_amount = Some(storage_period_fee_amount);
+    self
+  }
+
+  pub fn storage_period_fee_amount(&self) -> Option<&f32> {
+    self.storage_period_fee_amount.as_ref()
+  }
+
+  pub fn reset_storage_period_fee_amount(&mut self) {
+    self.storage_period_fee_amount = None;
   }
 
   pub fn set_to_date(&mut self, to_date: String) {

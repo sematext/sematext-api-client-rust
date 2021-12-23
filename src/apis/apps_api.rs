@@ -35,19 +35,19 @@ impl<C: hyper::client::Connect> AppsApiClient<C> {
 }
 
 pub trait AppsApi {
-    fn delete_using_delete1(&self, any_state_app_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>>;
-    fn get_app_types_using_get1(&self, ) -> Box<Future<Item = ::models::AppTypesResponse, Error = Error<serde_json::Value>>>;
-    fn get_using_get1(&self, any_state_app_id: i64) -> Box<Future<Item = ::models::AppResponse, Error = Error<serde_json::Value>>>;
-    fn invite_app_guests_using_post1(&self, invitation: ::models::Invitation) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>>;
-    fn list_apps_users_using_get1(&self, ) -> Box<Future<Item = ::models::AppsResponse, Error = Error<serde_json::Value>>>;
+    fn delete_using_delete(&self, any_state_app_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>>;
+    fn get_app_types_using_get(&self, ) -> Box<Future<Item = ::models::AppTypesResponse, Error = Error<serde_json::Value>>>;
+    fn get_using_get(&self, any_state_app_id: i64) -> Box<Future<Item = ::models::AppResponse, Error = Error<serde_json::Value>>>;
+    fn invite_app_guests_using_post(&self, invitation: ::models::Invitation) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>>;
+    fn list_apps_users_using_get(&self, ) -> Box<Future<Item = ::models::AppsResponse, Error = Error<serde_json::Value>>>;
     fn list_using_get(&self, ) -> Box<Future<Item = ::models::AppsResponse, Error = Error<serde_json::Value>>>;
     fn update_description_using_put1(&self, any_state_app_id: i64, update_details: ::models::AppDescription) -> Box<Future<Item = ::models::AppResponse, Error = Error<serde_json::Value>>>;
-    fn update_using_put3(&self, dto: ::models::UpdateAppInfo, any_state_app_id: i64) -> Box<Future<Item = ::models::AppResponse, Error = Error<serde_json::Value>>>;
+    fn update_using_put2(&self, dto: ::models::UpdateAppInfo, any_state_app_id: i64) -> Box<Future<Item = ::models::AppResponse, Error = Error<serde_json::Value>>>;
 }
 
 
 impl<C: hyper::client::Connect>AppsApi for AppsApiClient<C> {
-    fn delete_using_delete1(&self, any_state_app_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>> {
+    fn delete_using_delete(&self, any_state_app_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
@@ -113,7 +113,7 @@ impl<C: hyper::client::Connect>AppsApi for AppsApiClient<C> {
         )
     }
 
-    fn get_app_types_using_get1(&self, ) -> Box<Future<Item = ::models::AppTypesResponse, Error = Error<serde_json::Value>>> {
+    fn get_app_types_using_get(&self, ) -> Box<Future<Item = ::models::AppTypesResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
@@ -179,7 +179,7 @@ impl<C: hyper::client::Connect>AppsApi for AppsApiClient<C> {
         )
     }
 
-    fn get_using_get1(&self, any_state_app_id: i64) -> Box<Future<Item = ::models::AppResponse, Error = Error<serde_json::Value>>> {
+    fn get_using_get(&self, any_state_app_id: i64) -> Box<Future<Item = ::models::AppResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
@@ -245,7 +245,7 @@ impl<C: hyper::client::Connect>AppsApi for AppsApiClient<C> {
         )
     }
 
-    fn invite_app_guests_using_post1(&self, invitation: ::models::Invitation) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>> {
+    fn invite_app_guests_using_post(&self, invitation: ::models::Invitation) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
@@ -315,7 +315,7 @@ impl<C: hyper::client::Connect>AppsApi for AppsApiClient<C> {
         )
     }
 
-    fn list_apps_users_using_get1(&self, ) -> Box<Future<Item = ::models::AppsResponse, Error = Error<serde_json::Value>>> {
+    fn list_apps_users_using_get(&self, ) -> Box<Future<Item = ::models::AppsResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
@@ -517,7 +517,7 @@ impl<C: hyper::client::Connect>AppsApi for AppsApiClient<C> {
         )
     }
 
-    fn update_using_put3(&self, dto: ::models::UpdateAppInfo, any_state_app_id: i64) -> Box<Future<Item = ::models::AppResponse, Error = Error<serde_json::Value>>> {
+    fn update_using_put2(&self, dto: ::models::UpdateAppInfo, any_state_app_id: i64) -> Box<Future<Item = ::models::AppResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();

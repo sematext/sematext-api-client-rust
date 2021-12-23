@@ -1,6 +1,6 @@
 [package]
 name = "stcloud"
-version = "0.3.1"
+version = "0.4.0"
 authors = ["Sematext Inc"]
 description = "Client package for talking to Sematext Cloud."
 readme = "README.md"
@@ -9,14 +9,14 @@ license-file = "LICENSE"
 keywords = ["monitoring", "logging", "metrics", "alerting", "sematext"]
 
 [dependencies]
-serde = "1.0.131"
-serde_derive = "1.0.131"
-serde_yaml = "0.8.23"
-serde_json = "1.0.73"
-base64 = "0.13.0"
-futures = "0.3.17"
-hyper = "0.14.16"
-url = "2.2.2"
+serde = "1.0"
+serde_derive = "1.0"
+serde_yaml = "0.7"
+serde_json = "1.0"
+base64 = "~0.7.0"
+futures = "0.1.16"
+hyper = "0.11.6"
+url = "1.5"
 
 [dev-dependencies]
-tokio-core = "0.1.18"
+tokio-core = "*"

@@ -35,16 +35,16 @@ impl<C: hyper::client::Connect> AlertsApiClient<C> {
 }
 
 pub trait AlertsApi {
-    fn create_alert_using_post1(&self, dto: ::models::AlertRule) -> Box<Future<Item = ::models::AlertRuleResponse, Error = Error<serde_json::Value>>>;
+    fn create_alert_using_post(&self, dto: ::models::AlertRule) -> Box<Future<Item = ::models::AlertRuleResponse, Error = Error<serde_json::Value>>>;
     fn delete_alert_rule_using_delete1(&self, updateable_alert_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>>;
-    fn disable_alert_rule_using_put1(&self, updateable_alert_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>>;
-    fn enable_alert_rule_using_put1(&self, updateable_alert_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>>;
-    fn get_alert_rules_for_app_using_get(&self, app_id: i64) -> Box<Future<Item = ::models::AlertRulesResponse, Error = Error<serde_json::Value>>>;
+    fn disable_alert_rule_using_put(&self, updateable_alert_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>>;
+    fn enable_alert_rule_using_put(&self, updateable_alert_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>>;
+    fn get_alert_rules_for_app_using_get1(&self, app_id: i64) -> Box<Future<Item = ::models::AlertRulesResponse, Error = Error<serde_json::Value>>>;
 }
 
 
 impl<C: hyper::client::Connect>AlertsApi for AlertsApiClient<C> {
-    fn create_alert_using_post1(&self, dto: ::models::AlertRule) -> Box<Future<Item = ::models::AlertRuleResponse, Error = Error<serde_json::Value>>> {
+    fn create_alert_using_post(&self, dto: ::models::AlertRule) -> Box<Future<Item = ::models::AlertRuleResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
@@ -180,7 +180,7 @@ impl<C: hyper::client::Connect>AlertsApi for AlertsApiClient<C> {
         )
     }
 
-    fn disable_alert_rule_using_put1(&self, updateable_alert_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>> {
+    fn disable_alert_rule_using_put(&self, updateable_alert_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
@@ -246,7 +246,7 @@ impl<C: hyper::client::Connect>AlertsApi for AlertsApiClient<C> {
         )
     }
 
-    fn enable_alert_rule_using_put1(&self, updateable_alert_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>> {
+    fn enable_alert_rule_using_put(&self, updateable_alert_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
@@ -312,7 +312,7 @@ impl<C: hyper::client::Connect>AlertsApi for AlertsApiClient<C> {
         )
     }
 
-    fn get_alert_rules_for_app_using_get(&self, app_id: i64) -> Box<Future<Item = ::models::AlertRulesResponse, Error = Error<serde_json::Value>>> {
+    fn get_alert_rules_for_app_using_get1(&self, app_id: i64) -> Box<Future<Item = ::models::AlertRulesResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
