@@ -14,6 +14,8 @@ use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Subscription {
+  #[serde(rename = "additionalParams")]
+  additional_params: Option<String>,
   #[serde(rename = "addresses")]
   addresses: Option<String>,
   #[serde(rename = "createdBy")]
@@ -49,6 +51,7 @@ pub struct Subscription {
 impl Subscription {
   pub fn new() -> Subscription {
     Subscription {
+      additional_params: None,
       addresses: None,
       created_by: None,
       dashboard_id: None,
@@ -65,6 +68,23 @@ impl Subscription {
       time_range: None,
       user_permissions: None
     }
+  }
+
+  pub fn set_additional_params(&mut self, additional_params: String) {
+    self.additional_params = Some(additional_params);
+  }
+
+  pub fn with_additional_params(mut self, additional_params: String) -> Subscription {
+    self.additional_params = Some(additional_params);
+    self
+  }
+
+  pub fn additional_params(&self) -> Option<&String> {
+    self.additional_params.as_ref()
+  }
+
+  pub fn reset_additional_params(&mut self) {
+    self.additional_params = None;
   }
 
   pub fn set_addresses(&mut self, addresses: String) {

@@ -14,6 +14,8 @@ use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ReportInfo {
+  #[serde(rename = "additionalParams")]
+  additional_params: Option<String>,
   /// Comma separated list of email addresses
   #[serde(rename = "addresses")]
   addresses: Option<String>,
@@ -36,6 +38,7 @@ pub struct ReportInfo {
 impl ReportInfo {
   pub fn new() -> ReportInfo {
     ReportInfo {
+      additional_params: None,
       addresses: None,
       app_id: None,
       end_date: None,
@@ -45,6 +48,23 @@ impl ReportInfo {
       subject: None,
       text: None
     }
+  }
+
+  pub fn set_additional_params(&mut self, additional_params: String) {
+    self.additional_params = Some(additional_params);
+  }
+
+  pub fn with_additional_params(mut self, additional_params: String) -> ReportInfo {
+    self.additional_params = Some(additional_params);
+    self
+  }
+
+  pub fn additional_params(&self) -> Option<&String> {
+    self.additional_params.as_ref()
+  }
+
+  pub fn reset_additional_params(&mut self) {
+    self.additional_params = None;
   }
 
   pub fn set_addresses(&mut self, addresses: String) {

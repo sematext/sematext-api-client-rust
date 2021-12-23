@@ -14,8 +14,6 @@ use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct UsageDto {
-  #[serde(rename = "count")]
-  count: Option<i64>,
   #[serde(rename = "dailyUsage")]
   daily_usage: Option<Vec<::models::DailyDto>>,
   #[serde(rename = "dailyVolumeMB")]
@@ -24,6 +22,10 @@ pub struct UsageDto {
   end: Option<String>,
   #[serde(rename = "failedCount")]
   failed_count: Option<i64>,
+  #[serde(rename = "ingestedCount")]
+  ingested_count: Option<i64>,
+  #[serde(rename = "ingestedVolume")]
+  ingested_volume: Option<i64>,
   #[serde(rename = "limitChangeEvents")]
   limit_change_events: Option<Vec<::models::LimitChangeEventDto>>,
   #[serde(rename = "maxAllowedMB")]
@@ -32,8 +34,10 @@ pub struct UsageDto {
   max_limit_mb: Option<i64>,
   #[serde(rename = "start")]
   start: Option<String>,
-  #[serde(rename = "volume")]
-  volume: Option<i64>,
+  #[serde(rename = "storedCount")]
+  stored_count: Option<i64>,
+  #[serde(rename = "storedVolume")]
+  stored_volume: Option<i64>,
   #[serde(rename = "volumeChangeEvents")]
   volume_change_events: Option<Vec<::models::LimitChangeEventDto>>
 }
@@ -41,35 +45,20 @@ pub struct UsageDto {
 impl UsageDto {
   pub fn new() -> UsageDto {
     UsageDto {
-      count: None,
       daily_usage: None,
       daily_volume_mb: None,
       end: None,
       failed_count: None,
+      ingested_count: None,
+      ingested_volume: None,
       limit_change_events: None,
       max_allowed_mb: None,
       max_limit_mb: None,
       start: None,
-      volume: None,
+      stored_count: None,
+      stored_volume: None,
       volume_change_events: None
     }
-  }
-
-  pub fn set_count(&mut self, count: i64) {
-    self.count = Some(count);
-  }
-
-  pub fn with_count(mut self, count: i64) -> UsageDto {
-    self.count = Some(count);
-    self
-  }
-
-  pub fn count(&self) -> Option<&i64> {
-    self.count.as_ref()
-  }
-
-  pub fn reset_count(&mut self) {
-    self.count = None;
   }
 
   pub fn set_daily_usage(&mut self, daily_usage: Vec<::models::DailyDto>) {
@@ -140,6 +129,40 @@ impl UsageDto {
     self.failed_count = None;
   }
 
+  pub fn set_ingested_count(&mut self, ingested_count: i64) {
+    self.ingested_count = Some(ingested_count);
+  }
+
+  pub fn with_ingested_count(mut self, ingested_count: i64) -> UsageDto {
+    self.ingested_count = Some(ingested_count);
+    self
+  }
+
+  pub fn ingested_count(&self) -> Option<&i64> {
+    self.ingested_count.as_ref()
+  }
+
+  pub fn reset_ingested_count(&mut self) {
+    self.ingested_count = None;
+  }
+
+  pub fn set_ingested_volume(&mut self, ingested_volume: i64) {
+    self.ingested_volume = Some(ingested_volume);
+  }
+
+  pub fn with_ingested_volume(mut self, ingested_volume: i64) -> UsageDto {
+    self.ingested_volume = Some(ingested_volume);
+    self
+  }
+
+  pub fn ingested_volume(&self) -> Option<&i64> {
+    self.ingested_volume.as_ref()
+  }
+
+  pub fn reset_ingested_volume(&mut self) {
+    self.ingested_volume = None;
+  }
+
   pub fn set_limit_change_events(&mut self, limit_change_events: Vec<::models::LimitChangeEventDto>) {
     self.limit_change_events = Some(limit_change_events);
   }
@@ -208,21 +231,38 @@ impl UsageDto {
     self.start = None;
   }
 
-  pub fn set_volume(&mut self, volume: i64) {
-    self.volume = Some(volume);
+  pub fn set_stored_count(&mut self, stored_count: i64) {
+    self.stored_count = Some(stored_count);
   }
 
-  pub fn with_volume(mut self, volume: i64) -> UsageDto {
-    self.volume = Some(volume);
+  pub fn with_stored_count(mut self, stored_count: i64) -> UsageDto {
+    self.stored_count = Some(stored_count);
     self
   }
 
-  pub fn volume(&self) -> Option<&i64> {
-    self.volume.as_ref()
+  pub fn stored_count(&self) -> Option<&i64> {
+    self.stored_count.as_ref()
   }
 
-  pub fn reset_volume(&mut self) {
-    self.volume = None;
+  pub fn reset_stored_count(&mut self) {
+    self.stored_count = None;
+  }
+
+  pub fn set_stored_volume(&mut self, stored_volume: i64) {
+    self.stored_volume = Some(stored_volume);
+  }
+
+  pub fn with_stored_volume(mut self, stored_volume: i64) -> UsageDto {
+    self.stored_volume = Some(stored_volume);
+    self
+  }
+
+  pub fn stored_volume(&self) -> Option<&i64> {
+    self.stored_volume.as_ref()
+  }
+
+  pub fn reset_stored_volume(&mut self) {
+    self.stored_volume = None;
   }
 
   pub fn set_volume_change_events(&mut self, volume_change_events: Vec<::models::LimitChangeEventDto>) {

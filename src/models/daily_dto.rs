@@ -18,10 +18,14 @@ pub struct DailyDto {
   day: Option<i64>,
   #[serde(rename = "failed")]
   failed: Option<i64>,
-  #[serde(rename = "indexed")]
-  indexed: Option<i64>,
-  #[serde(rename = "volume")]
-  volume: Option<i64>
+  #[serde(rename = "ingestedCount")]
+  ingested_count: Option<i64>,
+  #[serde(rename = "ingestedVolume")]
+  ingested_volume: Option<i64>,
+  #[serde(rename = "storedCount")]
+  stored_count: Option<i64>,
+  #[serde(rename = "storedVolume")]
+  stored_volume: Option<i64>
 }
 
 impl DailyDto {
@@ -29,8 +33,10 @@ impl DailyDto {
     DailyDto {
       day: None,
       failed: None,
-      indexed: None,
-      volume: None
+      ingested_count: None,
+      ingested_volume: None,
+      stored_count: None,
+      stored_volume: None
     }
   }
 
@@ -68,38 +74,72 @@ impl DailyDto {
     self.failed = None;
   }
 
-  pub fn set_indexed(&mut self, indexed: i64) {
-    self.indexed = Some(indexed);
+  pub fn set_ingested_count(&mut self, ingested_count: i64) {
+    self.ingested_count = Some(ingested_count);
   }
 
-  pub fn with_indexed(mut self, indexed: i64) -> DailyDto {
-    self.indexed = Some(indexed);
+  pub fn with_ingested_count(mut self, ingested_count: i64) -> DailyDto {
+    self.ingested_count = Some(ingested_count);
     self
   }
 
-  pub fn indexed(&self) -> Option<&i64> {
-    self.indexed.as_ref()
+  pub fn ingested_count(&self) -> Option<&i64> {
+    self.ingested_count.as_ref()
   }
 
-  pub fn reset_indexed(&mut self) {
-    self.indexed = None;
+  pub fn reset_ingested_count(&mut self) {
+    self.ingested_count = None;
   }
 
-  pub fn set_volume(&mut self, volume: i64) {
-    self.volume = Some(volume);
+  pub fn set_ingested_volume(&mut self, ingested_volume: i64) {
+    self.ingested_volume = Some(ingested_volume);
   }
 
-  pub fn with_volume(mut self, volume: i64) -> DailyDto {
-    self.volume = Some(volume);
+  pub fn with_ingested_volume(mut self, ingested_volume: i64) -> DailyDto {
+    self.ingested_volume = Some(ingested_volume);
     self
   }
 
-  pub fn volume(&self) -> Option<&i64> {
-    self.volume.as_ref()
+  pub fn ingested_volume(&self) -> Option<&i64> {
+    self.ingested_volume.as_ref()
   }
 
-  pub fn reset_volume(&mut self) {
-    self.volume = None;
+  pub fn reset_ingested_volume(&mut self) {
+    self.ingested_volume = None;
+  }
+
+  pub fn set_stored_count(&mut self, stored_count: i64) {
+    self.stored_count = Some(stored_count);
+  }
+
+  pub fn with_stored_count(mut self, stored_count: i64) -> DailyDto {
+    self.stored_count = Some(stored_count);
+    self
+  }
+
+  pub fn stored_count(&self) -> Option<&i64> {
+    self.stored_count.as_ref()
+  }
+
+  pub fn reset_stored_count(&mut self) {
+    self.stored_count = None;
+  }
+
+  pub fn set_stored_volume(&mut self, stored_volume: i64) {
+    self.stored_volume = Some(stored_volume);
+  }
+
+  pub fn with_stored_volume(mut self, stored_volume: i64) -> DailyDto {
+    self.stored_volume = Some(stored_volume);
+    self
+  }
+
+  pub fn stored_volume(&self) -> Option<&i64> {
+    self.stored_volume.as_ref()
+  }
+
+  pub fn reset_stored_volume(&mut self) {
+    self.stored_volume = None;
   }
 
 }

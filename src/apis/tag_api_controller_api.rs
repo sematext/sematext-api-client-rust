@@ -36,7 +36,7 @@ impl<C: hyper::client::Connect> TagApiControllerApiClient<C> {
 
 pub trait TagApiControllerApi {
     fn get_tag_names_using_get(&self, app_ids: &str, from: i64, to: i64, metrics: bool, logs: bool, events: bool, rum: bool) -> Box<Future<Item = ::models::TagNamesResponse, Error = Error<serde_json::Value>>>;
-    fn get_using_get2(&self, app_ids: &str, tag: Vec<String>, from: i64, to: i64, metrics: bool, logs: bool, events: bool, rum: bool) -> Box<Future<Item = ::std::collections::HashMap<String, ::models::Dimension>, Error = Error<serde_json::Value>>>;
+    fn get_using_get(&self, app_ids: &str, tag: Vec<String>, from: i64, to: i64, metrics: bool, logs: bool, events: bool, rum: bool) -> Box<Future<Item = ::std::collections::HashMap<String, ::models::Dimension>, Error = Error<serde_json::Value>>>;
     fn get_using_get3(&self, app_ids: &str, tag: Vec<String>, from: i64, to: i64, metrics: bool, logs: bool, events: bool, rum: bool) -> Box<Future<Item = ::std::collections::HashMap<String, ::models::Dimension>, Error = Error<serde_json::Value>>>;
 }
 
@@ -114,7 +114,7 @@ impl<C: hyper::client::Connect>TagApiControllerApi for TagApiControllerApiClient
         )
     }
 
-    fn get_using_get2(&self, app_ids: &str, tag: Vec<String>, from: i64, to: i64, metrics: bool, logs: bool, events: bool, rum: bool) -> Box<Future<Item = ::std::collections::HashMap<String, ::models::Dimension>, Error = Error<serde_json::Value>>> {
+    fn get_using_get(&self, app_ids: &str, tag: Vec<String>, from: i64, to: i64, metrics: bool, logs: bool, events: bool, rum: bool) -> Box<Future<Item = ::std::collections::HashMap<String, ::models::Dimension>, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
