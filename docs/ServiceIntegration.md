@@ -1,6 +1,7 @@
 # ServiceIntegration
 
 ## Properties
+
 | Name                      | Type       | Description | Notes                        |
 | ------------------------- | ---------- | ----------- | ---------------------------- |
 | **app_type_id**           | **i64**    |             | [optional] [default to null] |

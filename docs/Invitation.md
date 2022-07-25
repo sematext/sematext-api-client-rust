@@ -1,6 +1,7 @@
 # Invitation
 
 ## Properties
+
 | Name               | Type                             | Description                                       | Notes                        |
 | ------------------ | -------------------------------- | ------------------------------------------------- | ---------------------------- |
 | **app**            | [***::models::App**](App.md)     | For invite request, only app.id needs to be set.  | [optional] [default to null] |

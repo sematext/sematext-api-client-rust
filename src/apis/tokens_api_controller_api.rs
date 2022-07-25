@@ -35,16 +35,16 @@ impl<C: hyper::client::Connect> TokensApiControllerApiClient<C> {
 }
 
 pub trait TokensApiControllerApi {
-    fn create_app_token1(&self, app_id: i64, dto: ::models::CreateTokenDto) -> Box<Future<Item = ::models::TokenResponse, Error = Error<serde_json::Value>>>;
+    fn create_app_token(&self, app_id: i64, dto: ::models::CreateTokenDto) -> Box<Future<Item = ::models::TokenResponse, Error = Error<serde_json::Value>>>;
     fn delete_app_token1(&self, app_id: i64, token_id: i64) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>>;
-    fn get_app_tokens(&self, app_id: i64) -> Box<Future<Item = ::models::TokensResponse, Error = Error<serde_json::Value>>>;
+    fn get_app_tokens1(&self, app_id: i64) -> Box<Future<Item = ::models::TokensResponse, Error = Error<serde_json::Value>>>;
     fn regenerate_app_token1(&self, app_id: i64, token_id: i64) -> Box<Future<Item = ::models::TokenResponse, Error = Error<serde_json::Value>>>;
-    fn update_app_token1(&self, app_id: i64, token_id: i64, dto: ::models::UpdateTokenDto) -> Box<Future<Item = ::models::TokenResponse, Error = Error<serde_json::Value>>>;
+    fn update_app_token(&self, app_id: i64, token_id: i64, dto: ::models::UpdateTokenDto) -> Box<Future<Item = ::models::TokenResponse, Error = Error<serde_json::Value>>>;
 }
 
 
 impl<C: hyper::client::Connect>TokensApiControllerApi for TokensApiControllerApiClient<C> {
-    fn create_app_token1(&self, app_id: i64, dto: ::models::CreateTokenDto) -> Box<Future<Item = ::models::TokenResponse, Error = Error<serde_json::Value>>> {
+    fn create_app_token(&self, app_id: i64, dto: ::models::CreateTokenDto) -> Box<Future<Item = ::models::TokenResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
@@ -180,7 +180,7 @@ impl<C: hyper::client::Connect>TokensApiControllerApi for TokensApiControllerApi
         )
     }
 
-    fn get_app_tokens(&self, app_id: i64) -> Box<Future<Item = ::models::TokensResponse, Error = Error<serde_json::Value>>> {
+    fn get_app_tokens1(&self, app_id: i64) -> Box<Future<Item = ::models::TokensResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();
@@ -312,7 +312,7 @@ impl<C: hyper::client::Connect>TokensApiControllerApi for TokensApiControllerApi
         )
     }
 
-    fn update_app_token1(&self, app_id: i64, token_id: i64, dto: ::models::UpdateTokenDto) -> Box<Future<Item = ::models::TokenResponse, Error = Error<serde_json::Value>>> {
+    fn update_app_token(&self, app_id: i64, token_id: i64, dto: ::models::UpdateTokenDto) -> Box<Future<Item = ::models::TokenResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();

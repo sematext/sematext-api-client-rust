@@ -1,13 +1,13 @@
 # \LogsAppApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *<https://localhost>*
 
 | Method                                                                     | HTTP request                          | Description     |
 | -------------------------------------------------------------------------- | ------------------------------------- | --------------- |
 | [**create_logsene_application**](LogsAppApi.md#create_logsene_application) | **Post** /logsene-reports/api/v3/apps | Create Logs App |
 
-
 # **create_logsene_application**
+
 > ::models::AppsResponse create_logsene_application(ctx, application_details)
 Create Logs App
 
@@ -28,7 +28,7 @@ Create Logs App
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

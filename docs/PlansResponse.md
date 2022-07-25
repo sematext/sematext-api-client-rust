@@ -1,6 +1,7 @@
 # PlansResponse
 
 ## Properties
+
 | Name        | Type                                                       | Description | Notes                        |
 | ----------- | ---------------------------------------------------------- | ----------- | ---------------------------- |
 | **data**    | [***::models::PlansResponseEntry**](PlansResponseEntry.md) |             | [optional] [default to null] |

@@ -1,13 +1,13 @@
 # \LogsUsageApiControllerApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *<https://localhost>*
 
 | Method                                                                              | HTTP request                                                   | Description |
 | ----------------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------- |
 | [**get_for_range_using_get**](LogsUsageApiControllerApi.md#get_for_range_using_get) | **Get** /logsene-reports/api/v3/apps/{appId}/usage/{from}/{to} | getForRange |
 
-
 # **get_for_range_using_get**
+
 > ::models::UsageResponse get_for_range_using_get(ctx, app_id, from, to)
 getForRange
 
@@ -30,7 +30,7 @@ getForRange
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

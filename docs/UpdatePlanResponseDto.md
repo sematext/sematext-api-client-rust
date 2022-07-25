@@ -1,6 +1,7 @@
 # UpdatePlanResponseDto
 
 ## Properties
+
 | Name        | Type                                       | Description | Notes                        |
 | ----------- | ------------------------------------------ | ----------- | ---------------------------- |
 | **events**  | [**Vec<::models::EventDto>**](EventDto.md) |             | [optional] [default to null] |

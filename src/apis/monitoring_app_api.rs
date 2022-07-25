@@ -35,12 +35,12 @@ impl<C: hyper::client::Connect> MonitoringAppApiClient<C> {
 }
 
 pub trait MonitoringAppApi {
-    fn create_spm_application(&self, application_details: ::models::CreateAppInfo) -> Box<Future<Item = ::models::AppsResponse, Error = Error<serde_json::Value>>>;
+    fn create_spm_application1(&self, application_details: ::models::CreateAppInfo) -> Box<Future<Item = ::models::AppsResponse, Error = Error<serde_json::Value>>>;
 }
 
 
 impl<C: hyper::client::Connect>MonitoringAppApi for MonitoringAppApiClient<C> {
-    fn create_spm_application(&self, application_details: ::models::CreateAppInfo) -> Box<Future<Item = ::models::AppsResponse, Error = Error<serde_json::Value>>> {
+    fn create_spm_application1(&self, application_details: ::models::CreateAppInfo) -> Box<Future<Item = ::models::AppsResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();

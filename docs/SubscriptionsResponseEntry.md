@@ -1,6 +1,7 @@
 # SubscriptionsResponseEntry
 
 ## Properties
+
 | Name              | Type                                               | Description | Notes                        |
 | ----------------- | -------------------------------------------------- | ----------- | ---------------------------- |
 | **subscriptions** | [**Vec<::models::Subscription>**](Subscription.md) |             | [optional] [default to null] |

@@ -1,6 +1,7 @@
 # TokenResponseEntry
 
 ## Properties
+
 | Name      | Type                                   | Description | Notes                        |
 | --------- | -------------------------------------- | ----------- | ---------------------------- |
 | **token** | [***::models::TokenDto**](TokenDto.md) |             | [optional] [default to null] |

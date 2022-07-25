@@ -1,6 +1,6 @@
 # \TokensApiControllerApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *<https://localhost>*
 
 | Method                                                                       | HTTP request                                                        | Description                               |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- |
@@ -10,8 +10,8 @@ All URIs are relative to *https://localhost*
 | [**regenerate_app_token1**](TokensApiControllerApi.md#regenerate_app_token1) | **Post** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)                     |
 | [**update_app_token**](TokensApiControllerApi.md#update_app_token)           | **Put** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable or name) |
 
-
 # **create_app_token**
+
 > ::models::TokenResponse create_app_token(ctx, app_id, dto)
 Create new app token
 
@@ -33,12 +33,13 @@ Create new app token
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_app_token1**
+
 > ::models::GenericMapBasedApiResponse delete_app_token1(ctx, app_id, token_id)
 Delete app token
 
@@ -60,12 +61,13 @@ Delete app token
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_app_tokens1**
+
 > ::models::TokensResponse get_app_tokens1(ctx, app_id)
 Get app available tokens
 
@@ -86,12 +88,13 @@ Get app available tokens
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **regenerate_app_token1**
+
 > ::models::TokenResponse regenerate_app_token1(ctx, app_id, token_id)
 Regenerate app token)
 
@@ -113,12 +116,13 @@ Regenerate app token)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_app_token**
+
 > ::models::TokenResponse update_app_token(ctx, app_id, token_id, dto)
 Update app token (enable/disable or name)
 
@@ -141,7 +145,7 @@ Update app token (enable/disable or name)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

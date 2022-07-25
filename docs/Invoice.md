@@ -1,6 +1,7 @@
 # Invoice
 
 ## Properties
+
 | Name             | Type                                                                         | Description | Notes                        |
 | ---------------- | ---------------------------------------------------------------------------- | ----------- | ---------------------------- |
 | **all_charges**  | [**Vec<::models::ChargesDetailsResponseDto>**](ChargesDetailsResponseDto.md) |             | [optional] [default to null] |

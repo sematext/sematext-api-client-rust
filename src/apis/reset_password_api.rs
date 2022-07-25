@@ -35,12 +35,12 @@ impl<C: hyper::client::Connect> ResetPasswordApiClient<C> {
 }
 
 pub trait ResetPasswordApi {
-    fn reset_password_using_post(&self, dto: ::models::UserInfo) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>>;
+    fn reset_password_using_post1(&self, dto: ::models::UserInfo) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>>;
 }
 
 
 impl<C: hyper::client::Connect>ResetPasswordApi for ResetPasswordApiClient<C> {
-    fn reset_password_using_post(&self, dto: ::models::UserInfo) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>> {
+    fn reset_password_using_post1(&self, dto: ::models::UserInfo) -> Box<Future<Item = ::models::GenericMapBasedApiResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();

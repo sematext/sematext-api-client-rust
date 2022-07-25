@@ -1,6 +1,7 @@
 # AlertNotification
 
 ## Properties
+
 | Name               | Type       | Description | Notes                        |
 | ------------------ | ---------- | ----------- | ---------------------------- |
 | **app_name**       | **String** |             | [optional] [default to null] |

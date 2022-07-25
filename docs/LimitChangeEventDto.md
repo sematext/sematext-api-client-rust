@@ -1,6 +1,7 @@
 # LimitChangeEventDto
 
 ## Properties
+
 | Name           | Type       | Description | Notes                        |
 | -------------- | ---------- | ----------- | ---------------------------- |
 | **event_time** | **String** |             | [optional] [default to null] |

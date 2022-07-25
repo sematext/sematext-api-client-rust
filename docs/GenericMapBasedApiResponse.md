@@ -1,6 +1,7 @@
 # GenericMapBasedApiResponse
 
 ## Properties
+
 | Name        | Type                                 | Description | Notes                        |
 | ----------- | ------------------------------------ | ----------- | ---------------------------- |
 | **data**    | [***Value**](Value.md)               |             | [optional] [default to null] |

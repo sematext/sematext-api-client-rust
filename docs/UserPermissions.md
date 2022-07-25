@@ -1,6 +1,7 @@
 # UserPermissions
 
 ## Properties
+
 | Name           | Type     | Description | Notes                        |
 | -------------- | -------- | ----------- | ---------------------------- |
 | **can_delete** | **bool** |             | [optional] [default to null] |

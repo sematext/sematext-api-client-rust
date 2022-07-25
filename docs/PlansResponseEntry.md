@@ -1,6 +1,7 @@
 # PlansResponseEntry
 
 ## Properties
+
 | Name                | Type                               | Description | Notes                        |
 | ------------------- | ---------------------------------- | ----------- | ---------------------------- |
 | **available_plans** | [**Vec<::models::Plan>**](Plan.md) |             | [optional] [default to null] |

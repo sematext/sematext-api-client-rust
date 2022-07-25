@@ -1,6 +1,7 @@
 # InvoiceResponseEntry
 
 ## Properties
+
 | Name        | Type                                 | Description | Notes                        |
 | ----------- | ------------------------------------ | ----------- | ---------------------------- |
 | **invoice** | [***::models::Invoice**](Invoice.md) |             | [optional] [default to null] |

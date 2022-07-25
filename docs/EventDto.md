@@ -1,6 +1,7 @@
 # EventDto
 
 ## Properties
+
 | Name      | Type                   | Description | Notes                        |
 | --------- | ---------------------- | ----------- | ---------------------------- |
 | **from**  | [***Value**](Value.md) |             | [optional] [default to null] |
