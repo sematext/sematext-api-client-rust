@@ -1,23 +1,23 @@
 # \SubscriptionsApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *<https://localhost>*
 
 | Method                                                                             | HTTP request                                                          | Description                             |
 | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------- |
-| [**create_for_app_using_post1**](SubscriptionsApi.md#create_for_app_using_post1)   | **Post** /users-web/api/v3/apps/{appId}/subscription                  | Create App subscription                 |
+| [**create_for_app_using_post**](SubscriptionsApi.md#create_for_app_using_post)     | **Post** /users-web/api/v3/apps/{appId}/subscription                  | Create App subscription                 |
 | [**create_for_dash_using_post**](SubscriptionsApi.md#create_for_dash_using_post)   | **Post** /users-web/api/v3/dashboards/{dashId}/subscription           | Create dashboard subscription           |
-| [**delete_using_delete2**](SubscriptionsApi.md#delete_using_delete2)               | **Delete** /users-web/api/v3/subscriptions/{updateableSubscriptionId} | Delete subscription                     |
-| [**list_using_get2**](SubscriptionsApi.md#list_using_get2)                         | **Get** /users-web/api/v3/apps/{appId}/subscriptions                  | Get subscriptions for an App            |
+| [**delete_using_delete3**](SubscriptionsApi.md#delete_using_delete3)               | **Delete** /users-web/api/v3/subscriptions/{updateableSubscriptionId} | Delete subscription                     |
+| [**list_using_get3**](SubscriptionsApi.md#list_using_get3)                         | **Get** /users-web/api/v3/apps/{appId}/subscriptions                  | Get subscriptions for an App            |
 | [**list_using_get5**](SubscriptionsApi.md#list_using_get5)                         | **Get** /users-web/api/v3/subscriptions                               | Get current account&#39;s subscriptions |
 | [**send_app_report_using_post1**](SubscriptionsApi.md#send_app_report_using_post1) | **Post** /users-web/api/v3/apps/{appId}/report/send                   | Email an App report                     |
 | [**send_dash_report_using_post**](SubscriptionsApi.md#send_dash_report_using_post) | **Post** /users-web/api/v3/dashboards/{dashId}/report/send            | Email a dashboard report                |
-| [**toggle_enabled_using_put1**](SubscriptionsApi.md#toggle_enabled_using_put1)     | **Put** /users-web/api/v3/subscriptions/{updateableSubscriptionId}    | Toggle subscription status              |
+| [**toggle_enabled_using_put**](SubscriptionsApi.md#toggle_enabled_using_put)       | **Put** /users-web/api/v3/subscriptions/{updateableSubscriptionId}    | Toggle subscription status              |
 | [**update_for_app_using_put**](SubscriptionsApi.md#update_for_app_using_put)       | **Put** /users-web/api/v3/apps/{appId}/subscription                   | Update App subscription                 |
 | [**update_for_dash_using_put1**](SubscriptionsApi.md#update_for_dash_using_put1)   | **Put** /users-web/api/v3/dashboards/{dashId}/subscription            | Update dashboard subscription           |
 
+# **create_for_app_using_post**
 
-# **create_for_app_using_post1**
-> ::models::SubscriptionResponse create_for_app_using_post1(ctx, app_id, subscription)
+> ::models::SubscriptionResponse create_for_app_using_post(ctx, app_id, subscription)
 Create App subscription
 
 ### Required Parameters
@@ -38,12 +38,13 @@ Create App subscription
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_for_dash_using_post**
+
 > ::models::SubscriptionResponse create_for_dash_using_post(ctx, dash_id, subscription)
 Create dashboard subscription
 
@@ -65,13 +66,14 @@ Create dashboard subscription
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_using_delete2**
-> ::models::GenericMapBasedApiResponse delete_using_delete2(ctx, updateable_subscription_id)
+# **delete_using_delete3**
+
+> ::models::GenericMapBasedApiResponse delete_using_delete3(ctx, updateable_subscription_id)
 Delete subscription
 
 ### Required Parameters
@@ -91,13 +93,14 @@ Delete subscription
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_using_get2**
-> ::models::SubscriptionsResponse list_using_get2(ctx, app_id)
+# **list_using_get3**
+
+> ::models::SubscriptionsResponse list_using_get3(ctx, app_id)
 Get subscriptions for an App
 
 ### Required Parameters
@@ -117,16 +120,18 @@ Get subscriptions for an App
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_using_get5**
+
 > ::models::SubscriptionsResponse list_using_get5(ctx, )
 Get current account's subscriptions
 
 ### Required Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -139,12 +144,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **send_app_report_using_post1**
+
 > ::models::MailReportResponse send_app_report_using_post1(ctx, app_id, email_dto)
 Email an App report
 
@@ -166,12 +172,13 @@ Email an App report
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **send_dash_report_using_post**
+
 > ::models::MailReportResponse send_dash_report_using_post(ctx, dash_id, email_dto)
 Email a dashboard report
 
@@ -193,13 +200,14 @@ Email a dashboard report
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **toggle_enabled_using_put1**
-> ::models::SubscriptionResponse toggle_enabled_using_put1(ctx, updateable_subscription_id, dto)
+# **toggle_enabled_using_put**
+
+> ::models::SubscriptionResponse toggle_enabled_using_put(ctx, updateable_subscription_id, dto)
 Toggle subscription status
 
 ### Required Parameters
@@ -220,12 +228,13 @@ Toggle subscription status
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_for_app_using_put**
+
 > ::models::SubscriptionResponse update_for_app_using_put(ctx, app_id, subscription)
 Update App subscription
 
@@ -247,12 +256,13 @@ Update App subscription
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_for_dash_using_put1**
+
 > ::models::SubscriptionResponse update_for_dash_using_put1(ctx, dash_id, subscription)
 Update dashboard subscription
 
@@ -274,7 +284,7 @@ Update dashboard subscription
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

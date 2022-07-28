@@ -82,6 +82,8 @@ pub struct AlertRule {
   notification_integrations: Option<Vec<::models::NotificationIntegration>>,
   #[serde(rename = "notificationsEnabled")]
   notifications_enabled: Option<bool>,
+  #[serde(rename = "priority")]
+  priority: Option<String>,
   #[serde(rename = "query")]
   query: Option<String>,
   #[serde(rename = "reportName")]
@@ -149,6 +151,7 @@ impl AlertRule {
       notification_emails: None,
       notification_integrations: None,
       notifications_enabled: None,
+      priority: None,
       query: None,
       report_name: None,
       rule_key: None,
@@ -742,6 +745,23 @@ impl AlertRule {
 
   pub fn reset_notifications_enabled(&mut self) {
     self.notifications_enabled = None;
+  }
+
+  pub fn set_priority(&mut self, priority: String) {
+    self.priority = Some(priority);
+  }
+
+  pub fn with_priority(mut self, priority: String) -> AlertRule {
+    self.priority = Some(priority);
+    self
+  }
+
+  pub fn priority(&self) -> Option<&String> {
+    self.priority.as_ref()
+  }
+
+  pub fn reset_priority(&mut self) {
+    self.priority = None;
   }
 
   pub fn set_query(&mut self, query: String) {

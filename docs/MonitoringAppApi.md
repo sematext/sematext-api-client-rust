@@ -1,13 +1,13 @@
 # \MonitoringAppApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *<https://localhost>*
 
 | Method                                                                     | HTTP request                      | Description           |
 | -------------------------------------------------------------------------- | --------------------------------- | --------------------- |
 | [**create_spm_application1**](MonitoringAppApi.md#create_spm_application1) | **Post** /spm-reports/api/v3/apps | Create Monitoring App |
 
-
 # **create_spm_application1**
+
 > ::models::AppsResponse create_spm_application1(ctx, application_details)
 Create Monitoring App
 
@@ -28,7 +28,7 @@ Create Monitoring App
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -1,6 +1,7 @@
 # AlertRulesResponseEntry
 
 ## Properties
+
 | Name            | Type                                         | Description | Notes                        |
 | --------------- | -------------------------------------------- | ----------- | ---------------------------- |
 | **alert_rules** | [**Vec<::models::AlertRule>**](AlertRule.md) |             | [optional] [default to null] |

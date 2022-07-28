@@ -1,6 +1,7 @@
 # DayUsageData
 
 ## Properties
+
 | Name                                | Type       | Description | Notes                        |
 | ----------------------------------- | ---------- | ----------- | ---------------------------- |
 | **count_daily_data_points**         | **i32**    |             | [optional] [default to null] |

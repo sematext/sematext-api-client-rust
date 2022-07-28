@@ -1,6 +1,7 @@
 # NotificationIntegration
 
 ## Properties
+
 | Name                 | Type                                            | Description | Notes                        |
 | -------------------- | ----------------------------------------------- | ----------- | ---------------------------- |
 | **applicability**    | **String**                                      |             | [optional] [default to null] |

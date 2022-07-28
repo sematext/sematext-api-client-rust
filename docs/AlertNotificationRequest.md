@@ -1,6 +1,7 @@
 # AlertNotificationRequest
 
 ## Properties
+
 | Name                 | Type       | Description                                                                                                     | Notes                        |
 | -------------------- | ---------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------- |
 | **default_interval** | **i64**    |                                                                                                                 | [optional] [default to null] |

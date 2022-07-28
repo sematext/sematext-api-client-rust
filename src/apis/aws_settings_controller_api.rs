@@ -35,12 +35,12 @@ impl<C: hyper::client::Connect> AwsSettingsControllerApiClient<C> {
 }
 
 pub trait AwsSettingsControllerApi {
-    fn update_using_put1(&self, app_id: i64, dto: ::models::CloudWatchSettings) -> Box<Future<Item = ::models::CloudWatchSettingsResponse, Error = Error<serde_json::Value>>>;
+    fn update_using_put(&self, app_id: i64, dto: ::models::CloudWatchSettings) -> Box<Future<Item = ::models::CloudWatchSettingsResponse, Error = Error<serde_json::Value>>>;
 }
 
 
 impl<C: hyper::client::Connect>AwsSettingsControllerApi for AwsSettingsControllerApiClient<C> {
-    fn update_using_put1(&self, app_id: i64, dto: ::models::CloudWatchSettings) -> Box<Future<Item = ::models::CloudWatchSettingsResponse, Error = Error<serde_json::Value>>> {
+    fn update_using_put(&self, app_id: i64, dto: ::models::CloudWatchSettings) -> Box<Future<Item = ::models::CloudWatchSettingsResponse, Error = Error<serde_json::Value>>> {
         let configuration: &configuration::Configuration<C> = self.configuration.borrow();
 
         let mut auth_headers = HashMap::<String, String>::new();

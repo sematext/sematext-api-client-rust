@@ -1,6 +1,7 @@
 # UpdateTokenDto
 
 ## Properties
+
 | Name        | Type       | Description | Notes                        |
 | ----------- | ---------- | ----------- | ---------------------------- |
 | **enabled** | **bool**   |             | [optional] [default to null] |

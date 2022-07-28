@@ -1,6 +1,7 @@
 # UpdatePlanResponse
 
 ## Properties
+
 | Name        | Type                                                                 | Description | Notes                        |
 | ----------- | -------------------------------------------------------------------- | ----------- | ---------------------------- |
 | **data**    | [***::models::UpdatePlanResponseEntry**](UpdatePlanResponseEntry.md) |             | [optional] [default to null] |

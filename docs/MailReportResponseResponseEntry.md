@@ -1,6 +1,7 @@
 # MailReportResponseResponseEntry
 
 ## Properties
+
 | Name             | Type                                       | Description | Notes                        |
 | ---------------- | ------------------------------------------ | ----------- | ---------------------------- |
 | **subscription** | [***::models::ReportInfo**](ReportInfo.md) |             | [optional] [default to null] |

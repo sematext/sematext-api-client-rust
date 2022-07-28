@@ -1,6 +1,7 @@
 # NotificationsResponse
 
 ## Properties
+
 | Name        | Type                                                                       | Description | Notes                        |
 | ----------- | -------------------------------------------------------------------------- | ----------- | ---------------------------- |
 | **data**    | [***::models::NotificationsResponseEntry**](NotificationsResponseEntry.md) |             | [optional] [default to null] |

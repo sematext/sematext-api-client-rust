@@ -1,6 +1,7 @@
 # TokenDto
 
 ## Properties
+
 | Name           | Type       | Description | Notes                        |
 | -------------- | ---------- | ----------- | ---------------------------- |
 | **created_at** | **String** |             | [optional] [default to null] |

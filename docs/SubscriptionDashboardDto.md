@@ -1,6 +1,7 @@
 # SubscriptionDashboardDto
 
 ## Properties
+
 | Name             | Type       | Description | Notes                        |
 | ---------------- | ---------- | ----------- | ---------------------------- |
 | **addresses**    | **String** |             | [optional] [default to null] |

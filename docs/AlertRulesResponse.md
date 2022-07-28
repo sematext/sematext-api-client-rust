@@ -1,6 +1,7 @@
 # AlertRulesResponse
 
 ## Properties
+
 | Name        | Type                                                                 | Description | Notes                        |
 | ----------- | -------------------------------------------------------------------- | ----------- | ---------------------------- |
 | **data**    | [***::models::AlertRulesResponseEntry**](AlertRulesResponseEntry.md) |             | [optional] [default to null] |

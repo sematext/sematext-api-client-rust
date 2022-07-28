@@ -1,6 +1,7 @@
 # SubscriptionsResponse
 
 ## Properties
+
 | Name        | Type                                                                       | Description | Notes                        |
 | ----------- | -------------------------------------------------------------------------- | ----------- | ---------------------------- |
 | **data**    | [***::models::SubscriptionsResponseEntry**](SubscriptionsResponseEntry.md) |             | [optional] [default to null] |

@@ -1,6 +1,7 @@
 # AlertRule
 
 ## Properties
+
 | Name                                           | Type                                                                             | Description | Notes                        |
 | ---------------------------------------------- | -------------------------------------------------------------------------------- | ----------- | ---------------------------- |
 | **account_email**                              | **String**                                                                       |             | [optional] [default to null] |
@@ -37,6 +38,7 @@
 | **notification_emails**                        | **Vec<String>**                                                                  |             | [optional] [default to null] |
 | **notification_integrations**                  | [**Vec<::models::NotificationIntegration>**](NotificationIntegration.md)         |             | [optional] [default to null] |
 | **notifications_enabled**                      | **bool**                                                                         |             | [optional] [default to null] |
+| **priority**                                   | **String**                                                                       |             | [optional] [default to null] |
 | **query**                                      | **String**                                                                       |             | [optional] [default to null] |
 | **report_name**                                | **String**                                                                       |             | [optional] [default to null] |
 | **rule_key**                                   | **i64**                                                                          |             | [optional] [default to null] |

@@ -1,6 +1,7 @@
 # MailReportResponse
 
 ## Properties
+
 | Name        | Type                                                                                 | Description | Notes                        |
 | ----------- | ------------------------------------------------------------------------------------ | ----------- | ---------------------------- |
 | **data**    | [***::models::MailReportResponseResponseEntry**](MailReportResponseResponseEntry.md) |             | [optional] [default to null] |

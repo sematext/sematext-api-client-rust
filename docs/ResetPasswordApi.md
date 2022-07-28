@@ -1,14 +1,14 @@
 # \ResetPasswordApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *<https://localhost>*
 
-| Method                                                                         | HTTP request                                      | Description    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------- | -------------- |
-| [**reset_password_using_post**](ResetPasswordApi.md#reset_password_using_post) | **Post** /users-web/api/v3/account/password/reset | Reset Password |
+| Method                                                                           | HTTP request                                      | Description    |
+| -------------------------------------------------------------------------------- | ------------------------------------------------- | -------------- |
+| [**reset_password_using_post1**](ResetPasswordApi.md#reset_password_using_post1) | **Post** /users-web/api/v3/account/password/reset | Reset Password |
 
+# **reset_password_using_post1**
 
-# **reset_password_using_post**
-> ::models::GenericMapBasedApiResponse reset_password_using_post(ctx, dto)
+> ::models::GenericMapBasedApiResponse reset_password_using_post1(ctx, dto)
 Reset Password
 
 ### Required Parameters
@@ -28,7 +28,7 @@ Reset Password
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

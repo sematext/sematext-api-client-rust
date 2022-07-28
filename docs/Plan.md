@@ -1,6 +1,7 @@
 # Plan
 
 ## Properties
+
 | Name                     | Type       | Description | Notes                        |
 | ------------------------ | ---------- | ----------- | ---------------------------- |
 | **app_type**             | **String** |             | [optional] [default to null] |

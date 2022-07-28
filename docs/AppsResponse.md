@@ -1,6 +1,7 @@
 # AppsResponse
 
 ## Properties
+
 | Name        | Type                                                     | Description | Notes                        |
 | ----------- | -------------------------------------------------------- | ----------- | ---------------------------- |
 | **data**    | [***::models::AppsResponseEntry**](AppsResponseEntry.md) |             | [optional] [default to null] |

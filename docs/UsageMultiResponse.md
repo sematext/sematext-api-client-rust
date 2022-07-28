@@ -1,6 +1,7 @@
 # UsageMultiResponse
 
 ## Properties
+
 | Name        | Type                                                                 | Description | Notes                        |
 | ----------- | -------------------------------------------------------------------- | ----------- | ---------------------------- |
 | **data**    | [***::models::UsageMultiResponseEntry**](UsageMultiResponseEntry.md) |             | [optional] [default to null] |
