@@ -1,30 +1,30 @@
-# \LogsAppApi
+# {{classname}}
 
-All URIs are relative to *<https://localhost>*
+All URIs are relative to */*
 
-| Method                                                                     | HTTP request                          | Description     |
-| -------------------------------------------------------------------------- | ------------------------------------- | --------------- |
-| [**create_logsene_application**](LogsAppApi.md#create_logsene_application) | **Post** /logsene-reports/api/v3/apps | Create Logs App |
+| Method                                                                     | HTTP request                         | Description     |
+| -------------------------------------------------------------------------- | ------------------------------------ | --------------- |
+| [**create_logsene_application**](LogsAppApi.md#create_logsene_application) | **POST** logsene-reports/api/v3/apps | Create Logs App |
 
 # **create_logsene_application**
 
-> ::models::AppsResponse create_logsene_application(ctx, application_details)
+> AppsResponse create_logsene_application(ctx, body)
 Create Logs App
 
 ### Required Parameters
 
-| Name                    | Type                                  | Description                              | Notes                    |
-| ----------------------- | ------------------------------------- | ---------------------------------------- | ------------------------ |
-| **ctx**                 | **context.Context**                   | context containing the authentication    | nil if no authentication |
-| **application_details** | [**CreateAppInfo**](CreateAppInfo.md) | Details of the application to be created |
+| Name     | Type                                  | Description                              | Notes                    |
+| -------- | ------------------------------------- | ---------------------------------------- | ------------------------ |
+| **ctx**  | **context.Context**                   | context containing the authentication    | nil if no authentication |
+| **body** | [**CreateAppInfo**](CreateAppInfo.md) | Details of the application to be created |
 
 ### Return type
 
-[**::models::AppsResponse**](AppsResponse.md)
+[**AppsResponse**](AppsResponse.md)
 
 ### Authorization
 
-[api_key](../README.md#api_key)
+[api_key](../README.md#api_key),
 
 ### HTTP request headers
 

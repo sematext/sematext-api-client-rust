@@ -1,14 +1,14 @@
-# \AwsSettingsControllerApi
+# {{classname}}
 
-All URIs are relative to *<https://localhost>*
+All URIs are relative to */*
 
-| Method                                                               | HTTP request                               | Description                              |
-| -------------------------------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
-| [**update_using_put**](AwsSettingsControllerApi.md#update_using_put) | **Put** /users-web/api/v3/apps/{appId}/aws | Update App&#39;s AWS CloudWatch settings |
+| Method                                                               | HTTP request                              | Description                               |
+| -------------------------------------------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| [**update_using_put**](AwsSettingsControllerApi.md#update_using_put) | **PUT** users-web/api/v3/apps/{appId}/aws | Update App&#x27;s AWS CloudWatch settings |
 
 # **update_using_put**
 
-> ::models::CloudWatchSettingsResponse update_using_put(ctx, app_id, dto)
+> CloudWatchSettingsResponse update_using_put(ctx, body, app_id)
 Update App's AWS CloudWatch settings
 
 Applicable only for AWS Apps
@@ -18,16 +18,16 @@ Applicable only for AWS Apps
 | Name       | Type                                            | Description                           | Notes                    |
 | ---------- | ----------------------------------------------- | ------------------------------------- | ------------------------ |
 | **ctx**    | **context.Context**                             | context containing the authentication | nil if no authentication |
+| **body**   | [**CloudWatchSettings**](CloudWatchSettings.md) | dto                                   |
 | **app_id** | **i64**                                         | appId                                 |
-| **dto**    | [**CloudWatchSettings**](CloudWatchSettings.md) | dto                                   |
 
 ### Return type
 
-[**::models::CloudWatchSettingsResponse**](CloudWatchSettingsResponse.md)
+[**CloudWatchSettingsResponse**](CloudWatchSettingsResponse.md)
 
 ### Authorization
 
-[api_key](../README.md#api_key)
+[api_key](../README.md#api_key),
 
 ### HTTP request headers
 

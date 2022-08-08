@@ -5,7 +5,7 @@
 | Name                 | Type                                            | Description | Notes                        |
 | -------------------- | ----------------------------------------------- | ----------- | ---------------------------- |
 | **applicability**    | **String**                                      |             | [optional] [default to null] |
-| **create_date**      | **String**                                      |             | [optional] [default to null] |
+| **create_date**      | **DateTime<Utc>**                               |             | [optional] [default to null] |
 | **created_by_owner** | **bool**                                        |             | [optional] [default to null] |
 | **creator_id**       | **i64**                                         |             | [optional] [default to null] |
 | **id**               | **i64**                                         |             | [optional] [default to null] |
