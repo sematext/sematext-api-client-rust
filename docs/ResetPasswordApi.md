@@ -1,30 +1,30 @@
-# \ResetPasswordApi
+# {{classname}}
 
-All URIs are relative to *<https://localhost>*
+All URIs are relative to */*
 
-| Method                                                                           | HTTP request                                      | Description    |
-| -------------------------------------------------------------------------------- | ------------------------------------------------- | -------------- |
-| [**reset_password_using_post1**](ResetPasswordApi.md#reset_password_using_post1) | **Post** /users-web/api/v3/account/password/reset | Reset Password |
+| Method                                                                         | HTTP request                                     | Description    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------ | -------------- |
+| [**reset_password_using_post**](ResetPasswordApi.md#reset_password_using_post) | **POST** users-web/api/v3/account/password/reset | Reset Password |
 
-# **reset_password_using_post1**
+# **reset_password_using_post**
 
-> ::models::GenericMapBasedApiResponse reset_password_using_post1(ctx, dto)
+> GenericMapBasedApiResponse reset_password_using_post(ctx, body)
 Reset Password
 
 ### Required Parameters
 
-| Name    | Type                        | Description                           | Notes                    |
-| ------- | --------------------------- | ------------------------------------- | ------------------------ |
-| **ctx** | **context.Context**         | context containing the authentication | nil if no authentication |
-| **dto** | [**UserInfo**](UserInfo.md) | dto                                   |
+| Name     | Type                        | Description                           | Notes                    |
+| -------- | --------------------------- | ------------------------------------- | ------------------------ |
+| **ctx**  | **context.Context**         | context containing the authentication | nil if no authentication |
+| **body** | [**UserInfo**](UserInfo.md) | dto                                   |
 
 ### Return type
 
-[**::models::GenericMapBasedApiResponse**](Generic Map Based Api Response.md)
+[**GenericMapBasedApiResponse**](Generic Map Based Api Response.md)
 
 ### Authorization
 
-[api_key](../README.md#api_key)
+[api_key](../README.md#api_key),
 
 ### HTTP request headers
 

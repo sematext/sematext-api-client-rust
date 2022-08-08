@@ -1,16 +1,16 @@
-# \BillingApi
+# {{classname}}
 
-All URIs are relative to *<https://localhost>*
+All URIs are relative to */*
 
-| Method                                                                               | HTTP request                                                       | Description            |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------ | ---------------------- |
-| [**get_detailed_invoice_using_get**](BillingApi.md#get_detailed_invoice_using_get)   | **Get** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details    |
-| [**list_available_plans_using_get1**](BillingApi.md#list_available_plans_using_get1) | **Get** /users-web/api/v3/billing/availablePlans                   | Get available plans    |
-| [**update_plan_using_put**](BillingApi.md#update_plan_using_put)                     | **Put** /users-web/api/v3/billing/info/{appId}                     | Update plan for an app |
+| Method                                                                               | HTTP request                                                      | Description            |
+| ------------------------------------------------------------------------------------ | ----------------------------------------------------------------- | ---------------------- |
+| [**get_detailed_invoice_using_get1**](BillingApi.md#get_detailed_invoice_using_get1) | **GET** users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details    |
+| [**list_available_plans_using_get1**](BillingApi.md#list_available_plans_using_get1) | **GET** users-web/api/v3/billing/availablePlans                   | Get available plans    |
+| [**update_plan_using_put1**](BillingApi.md#update_plan_using_put1)                   | **PUT** users-web/api/v3/billing/info/{appId}                     | Update plan for an app |
 
-# **get_detailed_invoice_using_get**
+# **get_detailed_invoice_using_get1**
 
-> ::models::InvoiceResponse get_detailed_invoice_using_get(ctx, service, year, month)
+> InvoiceResponse get_detailed_invoice_using_get1(ctx, service, year, month)
 Get invoice details
 
 ### Required Parameters
@@ -24,22 +24,22 @@ Get invoice details
 
 ### Return type
 
-[**::models::InvoiceResponse**](InvoiceResponse.md)
+[**InvoiceResponse**](InvoiceResponse.md)
 
 ### Authorization
 
-[api_key](../README.md#api_key)
+[api_key](../README.md#api_key),
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_available_plans_using_get1**
 
-> ::models::PlansResponse list_available_plans_using_get1(ctx, optional)
+> PlansResponse list_available_plans_using_get1(ctx, optional)
 Get available plans
 
 ### Required Parameters
@@ -52,7 +52,6 @@ Get available plans
 ### Optional Parameters
 
 Optional parameters are passed through a map[string]interface{}.
-
 | Name               | Type       | Description   | Notes |
 | ------------------ | ---------- | ------------- | ----- |
 | **integration_id** | **i64**    | integrationId |
@@ -60,22 +59,22 @@ Optional parameters are passed through a map[string]interface{}.
 
 ### Return type
 
-[**::models::PlansResponse**](PlansResponse.md)
+[**PlansResponse**](PlansResponse.md)
 
 ### Authorization
 
-[api_key](../README.md#api_key)
+[api_key](../README.md#api_key),
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_plan_using_put**
+# **update_plan_using_put1**
 
-> ::models::UpdatePlanResponse update_plan_using_put(ctx, app_id, dto)
+> UpdatePlanResponse update_plan_using_put1(ctx, body, app_id)
 Update plan for an app
 
 ### Required Parameters
@@ -83,16 +82,16 @@ Update plan for an app
 | Name       | Type                              | Description                           | Notes                    |
 | ---------- | --------------------------------- | ------------------------------------- | ------------------------ |
 | **ctx**    | **context.Context**               | context containing the authentication | nil if no authentication |
+| **body**   | [**BillingInfo**](BillingInfo.md) | dto                                   |
 | **app_id** | **i64**                           | appId                                 |
-| **dto**    | [**BillingInfo**](BillingInfo.md) | dto                                   |
 
 ### Return type
 
-[**::models::UpdatePlanResponse**](UpdatePlanResponse.md)
+[**UpdatePlanResponse**](UpdatePlanResponse.md)
 
 ### Authorization
 
-[api_key](../README.md#api_key)
+[api_key](../README.md#api_key),
 
 ### HTTP request headers
 
